@@ -403,48 +403,59 @@
                     <div class="space-y-4">
                         <div class="flex items-center space-x-2 text-xs font-bold text-[#fbbf24] uppercase tracking-wider">
                             <i class="fa-solid fa-book-bookmark"></i>
-                            <span>Peer-Reviewed Journal Articles (已发表同行评审论文)</span>
+                            <span>Peer-Reviewed Journal Articles</span>
                         </div>
 
                         <!-- Published Paper 1: Field Crops Research -->
-                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.45)] bg-[#0c2035] space-y-2.5 shadow-md">
-                            <div class="flex flex-wrap items-center gap-2">
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                                    <i class="fa-solid fa-circle-check mr-1"></i>Published (正式见刊)
-                                </span>
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">
-                                    中科院1区 Top / SCI Q1 (IF ~5.6)
-                                </span>
-                                <span class="text-xs text-slate-300 font-mono">February 2026</span>
+                        <div class="p-5 sm:p-6 rounded-xl border border-[rgba(212,175,55,0.35)] bg-gradient-to-br from-[#0c2035] to-[#081728] space-y-3 shadow-md hover:border-[#fbbf24]/50 transition duration-200">
+                            
+                            <!-- Header Bibliographic Bar: Clean, refined, scholarly -->
+                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[rgba(212,175,55,0.15)] pb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs sm:text-sm font-serif font-bold text-[#fbbf24] tracking-wide">
+                                        Field Crops Research
+                                    </span>
+                                    <span class="text-slate-500 text-xs">·</span>
+                                    <span class="text-xs font-mono text-slate-300">Vol. 336, Art. 110228</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-mono text-[#fbbf24] bg-[#d4af37]/10 border border-[#d4af37]/30">
+                                        CAS Q1 Top · IF 5.6
+                                    </span>
+                                    <span class="text-xs text-slate-400 font-mono">2026</span>
+                                </div>
                             </div>
 
-                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug">
-                                Optimizing wheat yields from smallholdings: Crop density-dependent benefits of wide strip sowing under varying resource availability
+                            <!-- Paper Title -->
+                            <h3 class="text-base sm:text-lg font-bold text-white leading-snug font-serif">
+                                <a href="https://doi.org/10.1016/j.fcr.2025.110228" target="_blank" class="hover:text-[#fbbf24] transition duration-150">
+                                    Optimizing wheat yields from smallholdings: Crop density-dependent benefits of wide strip sowing under varying resource availability
+                                </a>
                             </h3>
 
-                            <p class="text-xs text-slate-200 leading-relaxed">
-                                Fan, J.-W., Jia, P., Li, S.-C., Sun, C.-Y., Palta, J. A., Kang, S.-Y., <strong class="text-[#fbbf24] underline decoration-[#d4af37]">Lv, X.-Y. (吕晓宇)</strong>, Hou, L., Li, F.-M., &amp; Du, Y.-L.
+                            <!-- Authors -->
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                                Fan, J.-W., Jia, P., Li, S.-C., Sun, C.-Y., Palta, J. A., Kang, S.-Y., <strong class="text-[#fbbf24] font-semibold border-b border-[#d4af37]/60 pb-0.5">Lv, X.-Y. (吕晓宇)</strong>, Hou, L., Li, F.-M., &amp; Du, Y.-L.
                             </p>
 
-                            <p class="text-xs text-[#d4af37] font-serif">
-                                <strong>Field Crops Research</strong>, 2026, Vol. 336: 110228.
-                            </p>
-
-                            <p class="text-[11px] text-slate-300 leading-normal">
-                                <i class="fa-solid fa-handshake-angle text-[#fbbf24] mr-1"></i>
-                                <em>Co-authored empirical agronomic study evaluating wide-strip sowing and density-dependent facilitation across smallholder cropping environments.</em>
+                            <!-- Role / Empirical Note -->
+                            <p class="text-xs text-slate-400 leading-relaxed pl-3 border-l-2 border-[#d4af37]/40 italic">
+                                Co-authored empirical agronomic study evaluating wide-strip sowing and density-dependent facilitation across smallholder cropping environments.
                             </p>
 
                             <!-- Interactive Buttons -->
-                            <div class="pt-1 flex flex-wrap gap-1">
-                                <a href="https://doi.org/10.1016/j.fcr.2025.110228" target="_blank" class="pub-btn primary">
-                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>DOI: 10.1016/j.fcr.2025.110228
+                            <div class="pt-2 flex flex-wrap gap-2 text-xs">
+                                <a href="https://doi.org/10.1016/j.fcr.2025.110228" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#d4af37]/15 hover:bg-[#d4af37] text-[#fbbf24] hover:text-[#071527] border border-[#d4af37]/40 font-medium transition duration-150">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    <span>DOI: 10.1016/j.fcr.2025.110228</span>
                                 </a>
-                                <button onclick="toggleBox('abs-fcr')" class="pub-btn">
-                                    <i class="fa-solid fa-align-left mr-1 text-[#fbbf24]"></i>Abstract
+                                <button onclick="toggleBox('abs-fcr')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#0a1b2e] hover:bg-[#0f2a44] text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-medium transition duration-150">
+                                    <i class="fa-regular fa-file-lines text-[#fbbf24]"></i>
+                                    <span>Abstract</span>
                                 </button>
-                                <button onclick="toggleBox('bib-fcr')" class="pub-btn">
-                                    <i class="fa-solid fa-quote-right mr-1 text-[#fbbf24]"></i>BibTeX
+                                <button onclick="toggleBox('bib-fcr')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#0a1b2e] hover:bg-[#0f2a44] text-slate-200 hover:text-white border border-slate-700 hover:border-slate-500 font-medium transition duration-150">
+                                    <i class="fa-solid fa-quote-right text-[#fbbf24]"></i>
+                                    <span>BibTeX</span>
                                 </button>
                             </div>
 
