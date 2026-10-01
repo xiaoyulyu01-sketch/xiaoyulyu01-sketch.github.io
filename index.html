@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiaoyu Lyu | AcademicPages Portfolio</title>
+    <title>Xiaoyu Lyu (吕晓宇) | Academic Profile</title>
     <meta name="description" content="Academic personal website of Xiaoyu Lyu - Final-Year M.Sc. in Ecology at Lanzhou University. Dryland Agriculture, Rainfed Intercropping, Microplate Nutrient Assays, and Phosphorus Economics.">
     <meta name="author" content="Xiaoyu Lyu">
 
-    <!-- Tailwind CSS CDN for utility classes -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        academic: {
-                            blue: '#0366d6',
-                            link: '#0366d6',
-                            dark: '#24292e',
-                            text: '#494e52',
-                            light: '#f2f3f3',
-                            border: '#e1e4e8',
-                            bg: '#f8fafc',
+                        gold: {
+                            50: '#fbf8eb',
+                            100: '#f5edd0',
+                            200: '#ebdaa4',
+                            300: '#dec071',
+                            400: '#d4af37',
+                            500: '#c5a059',
+                            600: '#aa820a',
+                            700: '#876308',
                         },
-                        lzu: '#175683',
+                        navy: {
+                            800: '#0f243e',
+                            850: '#0d2038',
+                            900: '#0a192c',
+                            950: '#071527',
+                        }
                     },
                     fontFamily: {
                         sans: ['-apple-system', 'BlinkMacSystemFont', 'Roboto', '"Segoe UI"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
@@ -35,30 +41,49 @@
         }
     </script>
 
-    <!-- FontAwesome 6 (Academic Icons) -->
+    <!-- FontAwesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- AcademicPages Classic Styling -->
+    <!-- Royal Blue & Gold Academic Styling with Crisp White Text -->
     <style>
+        :root {
+            --bg-deep: #071527;
+            --bg-card: rgba(13, 34, 58, 0.92);
+            --bg-card-elevated: rgba(16, 42, 70, 0.95);
+            --border-gold: rgba(212, 175, 55, 0.35);
+            --border-gold-bright: #d4af37;
+            --text-white: #ffffff;
+            --text-silver: #e2e8f0;
+            --text-muted: #cbd5e1;
+            --gold-accent: #fbbf24;
+            --gold-primary: #d4af37;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-            color: #494e52;
-            background-color: #f2f3f3;
-            line-height: 1.65;
+            color: var(--text-silver);
+            background-color: var(--bg-deep);
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 85%, rgba(23, 86, 131, 0.35) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(10, 25, 47, 0.8) 0%, #071527 100%);
+            background-attachment: fixed;
+            line-height: 1.68;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: #24292e;
+            color: var(--text-white);
             font-weight: 700;
             line-height: 1.25;
         }
 
         .academic-h2 {
-            font-size: 1.4rem;
-            border-bottom: 2px solid #e1e4e8;
-            padding-bottom: 0.35rem;
+            font-size: 1.45rem;
+            color: #ffffff;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+            padding-bottom: 0.4rem;
             margin-top: 2rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.25rem;
             position: relative;
         }
         .academic-h2::after {
@@ -66,50 +91,58 @@
             position: absolute;
             bottom: -2px;
             left: 0;
-            width: 48px;
+            width: 56px;
             height: 2px;
-            background-color: #175683;
+            background: linear-gradient(90deg, #d4af37, #fbbf24);
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
         }
 
-        /* Publication Buttons */
+        /* Publication & Action Buttons (Blue & Gold) */
         .pub-btn {
             display: inline-flex;
             align-items: center;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            border: 1px solid #d1d5db;
-            background-color: #ffffff;
-            color: #374151;
-            transition: all 0.15s ease-in-out;
+            padding: 0.25rem 0.7rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-gold);
+            background-color: rgba(13, 34, 58, 0.85);
+            color: #ffffff;
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
             margin-right: 0.35rem;
             margin-top: 0.35rem;
         }
         .pub-btn:hover {
-            border-color: #175683;
-            color: #175683;
-            background-color: #f0f7fc;
+            border-color: #fbbf24;
+            color: #fbbf24;
+            background-color: rgba(212, 175, 55, 0.12);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
         }
         .pub-btn.primary {
-            background-color: #175683;
-            color: #ffffff;
-            border-color: #175683;
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: #071527;
+            font-weight: 700;
+            border: 1px solid #f3ba4f;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.35);
         }
         .pub-btn.primary:hover {
-            background-color: #134569;
+            background: linear-gradient(135deg, #f3ba4f 0%, #d4af37 100%);
+            color: #040d18;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+            transform: translateY(-1px);
         }
 
         /* Abstract & BibTeX expandable boxes */
         .expand-box {
             display: none;
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background-color: #050f1c;
+            border: 1px solid rgba(212, 175, 55, 0.35);
             border-radius: 6px;
-            padding: 0.75rem 1rem;
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
+            padding: 0.85rem 1.1rem;
+            font-size: 0.82rem;
+            margin-top: 0.6rem;
+            color: #f1f5f9;
         }
 
         /* Sticky Left Sidebar on Desktop */
@@ -121,37 +154,48 @@
             }
         }
 
-        /* Modal custom scroll */
+        /* Custom Scrollbar for Modal */
         .custom-scroll::-webkit-scrollbar {
             width: 6px;
         }
         .custom-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: rgba(212, 175, 55, 0.4);
             border-radius: 3px;
+        }
+
+        /* Card glow effect */
+        .gold-glow-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(212, 175, 55, 0.08);
         }
     </style>
 </head>
-<body class="selection:bg-blue-100 selection:text-blue-900">
+<body class="selection:bg-amber-400 selection:text-slate-900">
 
-    <!-- AcademicPages Classic Header Navigation -->
-    <header class="sticky top-0 z-40 bg-white border-b border-[#e1e4e8] shadow-xs">
+    <!-- Header Navigation (Blue-Gold Theme) -->
+    <header class="sticky top-0 z-40 bg-[#07162b]/95 backdrop-blur-md border-b border-[rgba(212,175,55,0.3)] shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
-            <a href="#about" class="flex items-center space-x-2.5 text-slate-900 hover:text-lzu font-bold text-base transition">
-                <img src="assets/lzu_logo.svg" alt="LZU" class="w-6 h-6 object-contain">
-                <span>Xiaoyu Lyu</span>
-                <span class="text-xs text-slate-400 font-normal font-sans hidden sm:inline">| AcademicPages</span>
+            <a href="#about" class="flex items-center space-x-2.5 text-white hover:text-[#fbbf24] font-bold text-base transition">
+                <div class="w-7 h-7 rounded-full bg-white p-0.5 border border-[#d4af37] flex items-center justify-center shadow-xs">
+                    <img src="assets/lzu_logo.svg" alt="LZU" class="w-full h-full object-contain">
+                </div>
+                <span class="tracking-wide">Xiaoyu Lyu</span>
+                <span class="text-xs text-[#d4af37] font-normal font-sans hidden sm:inline">| 吕晓宇 · AcademicPages</span>
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-6 text-xs sm:text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-lzu transition">About</a>
-                <a href="#framework" class="hover:text-lzu transition">Mechanism Model</a>
-                <a href="#publications" class="hover:text-lzu transition">Publications</a>
-                <a href="#projects" class="hover:text-lzu transition">Projects</a>
-                <a href="#figures" class="hover:text-lzu transition">Research Figures</a>
-                <a href="#pipeline" class="hover:text-lzu transition">Methodology</a>
-                <a href="#education" class="hover:text-lzu transition">Education</a>
-                <a href="#cv" class="hover:text-lzu transition">CV</a>
+            <nav class="hidden md:flex items-center space-x-6 text-xs sm:text-sm font-medium text-slate-200">
+                <a href="#about" class="hover:text-[#fbbf24] transition">About</a>
+                <a href="#framework" class="hover:text-[#fbbf24] transition">Mechanism Model</a>
+                <a href="#publications" class="hover:text-[#fbbf24] transition">Publications</a>
+                <a href="#projects" class="hover:text-[#fbbf24] transition">Projects</a>
+                <a href="#figures" class="hover:text-[#fbbf24] transition">Research Figures</a>
+                <a href="#pipeline" class="hover:text-[#fbbf24] transition">Methodology</a>
+                <a href="#education" class="hover:text-[#fbbf24] transition">Education</a>
+                <a href="#cv" class="hover:text-[#fbbf24] transition">CV</a>
             </nav>
 
             <div class="flex items-center space-x-2">
@@ -168,177 +212,180 @@
 
             <!-- ================= LEFT SIDEBAR (Author Profile) ================= -->
             <aside class="lg:col-span-4 xl:col-span-3">
-                <div class="bg-white rounded-xl border border-[#e1e4e8] p-5 shadow-xs sticky-sidebar space-y-5">
+                <div class="gold-glow-card rounded-xl p-5 sticky-sidebar space-y-5">
                     
                     <!-- Avatar & Name -->
                     <div class="flex flex-col items-center text-center">
-                        <div class="relative w-36 h-36 rounded-full border-2 border-[#e1e4e8] p-1 bg-white shadow-xs overflow-hidden">
-                            <img src="assets/avatar_square.webp" alt="Xiaoyu Lyu (吕晓宇)" class="w-full h-full object-cover rounded-full shadow-inner">
-                            <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white" title="Seeking PhD / RA Positions"></span>
+                        <div class="relative w-36 h-36 rounded-full border-2 border-[#d4af37] p-1 bg-[#0d223a] shadow-[0_0_20px_rgba(212,175,55,0.35)] overflow-hidden">
+                            <img src="assets/avatar_square.webp" alt="Xiaoyu Lyu (吕晓宇)" class="w-full h-full object-cover rounded-full">
+                            <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-[#071527]" title="Seeking PhD / RA Positions"></span>
                         </div>
 
-                        <h1 class="text-xl font-bold text-slate-900 mt-3 font-serif">
+                        <h1 class="text-2xl font-bold text-white mt-3 font-serif tracking-tight">
                             Xiaoyu Lyu
                         </h1>
-                        <p class="text-xs text-slate-500 font-sans mt-0.5">
+                        <p class="text-xs text-[#fbbf24] font-medium mt-0.5">
                             吕晓宇 · Final-Year M.Sc.
                         </p>
-                        <p class="text-xs text-slate-700 font-medium mt-1 leading-snug">
+                        <p class="text-xs text-slate-200 mt-1 leading-snug">
                             Graduate Researcher in Dryland Crop Facilitation & Phosphorus Stoichiometry
                         </p>
                         
-                        <div class="mt-2.5 inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-900 border border-amber-200">
-                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5 animate-pulse"></span>
+                        <div class="mt-2.5 inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#d4af37]/15 text-[#fbbf24] border border-[#d4af37]/50 shadow-xs">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#fbbf24] mr-1.5 animate-pulse"></span>
                             <span>Seeking PhD & RA Openings</span>
                         </div>
                     </div>
 
-                    <!-- Meta Information List (Classic AcademicPages Format) -->
-                    <div class="border-t border-[#e1e4e8] pt-4 space-y-2.5 text-xs text-slate-600">
+                    <!-- Meta Information List (Blue-Gold Academic Format) -->
+                    <div class="border-t border-[rgba(212,175,55,0.25)] pt-4 space-y-2.5 text-xs text-slate-200">
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-solid fa-building-columns text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
+                            <i class="fa-solid fa-building-columns text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
                             <div>
-                                <span class="font-semibold text-slate-800 block">Lanzhou University</span>
-                                <span class="text-[11px] text-slate-500">College of Ecology (兰州大学)</span>
+                                <span class="font-semibold text-white block">Lanzhou University</span>
+                                <span class="text-[11px] text-slate-300">College of Ecology (兰州大学)</span>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-solid fa-location-dot text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
-                            <span>Lanzhou, Gansu, China</span>
+                            <i class="fa-solid fa-location-dot text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
+                            <span class="text-slate-200">Lanzhou, Gansu, China</span>
                         </div>
 
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-solid fa-graduation-cap text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
+                            <i class="fa-solid fa-graduation-cap text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
                             <div>
-                                <span class="text-slate-800 font-medium">M.Sc. GPA: <strong>87.3</strong> / 100</span>
-                                <span class="block text-[11px] text-slate-500">B.Eng. GPA: <strong>85.17</strong> / 100</span>
+                                <span class="text-white font-medium">M.Sc. GPA: <strong class="text-[#fbbf24]">87.3</strong> / 100</span>
+                                <span class="block text-[11px] text-slate-300">B.Eng. GPA: <strong class="text-[#fbbf24]">85.17</strong> / 100</span>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-solid fa-envelope text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
-                            <a href="mailto:xiaoyu.lyu01@gmail.com" class="text-academic-blue hover:underline break-all">xiaoyu.lyu01@gmail.com</a>
+                            <i class="fa-solid fa-envelope text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
+                            <a href="mailto:xiaoyu.lyu01@gmail.com" class="text-white hover:text-[#fbbf24] hover:underline break-all transition">xiaoyu.lyu01@gmail.com</a>
                         </div>
 
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-solid fa-phone text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
-                            <span>(+86) 185-6380-6108</span>
+                            <i class="fa-solid fa-phone text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
+                            <span class="text-slate-200">(+86) 185-6380-6108</span>
                         </div>
 
                         <div class="flex items-start space-x-2.5">
-                            <i class="fa-brands fa-github text-slate-400 mt-0.5 w-4 text-center shrink-0"></i>
-                            <a href="https://github.com/xiaoyulyu01-sketch" target="_blank" class="text-academic-blue hover:underline">xiaoyulyu01-sketch</a>
+                            <i class="fa-brands fa-github text-[#fbbf24] mt-0.5 w-4 text-center shrink-0"></i>
+                            <a href="https://github.com/xiaoyulyu01-sketch" target="_blank" class="text-white hover:text-[#fbbf24] hover:underline transition">xiaoyulyu01-sketch</a>
                         </div>
                     </div>
 
                     <!-- Fast Action Buttons -->
-                    <div class="border-t border-[#e1e4e8] pt-4 space-y-2">
-                        <a href="Xiaoyu_Lyu_CV.pdf" download="Xiaoyu_Lyu_CV.pdf" class="w-full py-2 px-3 rounded-md bg-[#175683] hover:bg-[#134569] text-white text-xs font-semibold flex items-center justify-center space-x-2 shadow-2xs transition">
+                    <div class="border-t border-[rgba(212,175,55,0.25)] pt-4 space-y-2">
+                        <a href="Xiaoyu_Lyu_CV.pdf" download="Xiaoyu_Lyu_CV.pdf" class="w-full py-2 px-3 rounded-md bg-gradient-to-r from-[#d4af37] to-[#b8860b] hover:from-[#f3ba4f] hover:to-[#d4af37] text-[#071527] font-bold text-xs flex items-center justify-center space-x-2 shadow-[0_2px_12px_rgba(212,175,55,0.35)] transition">
                             <i class="fa-solid fa-download text-xs"></i>
                             <span>Download Full CV (PDF)</span>
                         </a>
-                        <button onclick="copyContact()" class="w-full py-2 px-3 rounded-md bg-white border border-[#d1d5db] hover:border-[#175683] text-slate-700 hover:text-[#175683] text-xs font-semibold flex items-center justify-center space-x-2 transition" id="copyBtn">
-                            <i class="fa-regular fa-copy text-xs"></i>
+                        <button onclick="copyContact()" class="w-full py-2 px-3 rounded-md bg-[#0a1b2f] border border-[rgba(212,175,55,0.4)] hover:border-[#fbbf24] text-white hover:text-[#fbbf24] text-xs font-semibold flex items-center justify-center space-x-2 transition" id="copyBtn">
+                            <i class="fa-regular fa-copy text-xs text-[#fbbf24]"></i>
                             <span id="copyText">Copy Contact Details</span>
                         </button>
                     </div>
 
                     <!-- Academic Tags -->
-                    <div class="border-t border-[#e1e4e8] pt-3 text-[11px] text-slate-500">
-                        <span class="block font-semibold text-slate-700 uppercase tracking-wider text-[10px] mb-1.5">Specializations</span>
+                    <div class="border-t border-[rgba(212,175,55,0.25)] pt-3 text-[11px] text-slate-300">
+                        <span class="block font-semibold text-[#fbbf24] uppercase tracking-wider text-[10px] mb-1.5">Specializations</span>
                         <div class="flex flex-wrap gap-1">
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">Dryland Agronomy</span>
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">Intercropping</span>
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">Soil Moisture</span>
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">96-Well Colorimetry</span>
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">R (lme4)</span>
-                            <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-700">MaxEnt & GIS</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">Dryland Agronomy</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">Intercropping</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">Soil Moisture</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">96-Well Assays</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">R (lme4)</span>
+                            <span class="px-2 py-0.5 rounded bg-[#091b2e] border border-[rgba(212,175,55,0.3)] text-slate-200">MaxEnt & GIS</span>
                         </div>
                     </div>
 
                 </div>
             </aside>
 
-            <!-- ================= RIGHT MAIN CONTENT (AcademicPages Body) ================= -->
-            <main class="lg:col-span-8 xl:col-span-9 bg-white rounded-xl border border-[#e1e4e8] p-6 sm:p-10 shadow-xs space-y-12">
+            <!-- ================= RIGHT MAIN CONTENT ================= -->
+            <main class="lg:col-span-8 xl:col-span-9 gold-glow-card rounded-xl p-6 sm:p-10 space-y-12">
 
                 <!-- 1. ABOUT ME -->
                 <section id="about" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900 mt-0">About Me</h2>
+                    <h2 class="academic-h2 mt-0">About Me</h2>
                     
-                    <p class="text-sm leading-relaxed text-slate-700">
-                        I am a final-year Master's candidate in <strong class="text-slate-900">Ecology</strong> (expected graduation in June 2027) at the <strong class="text-slate-900">College of Ecology, Lanzhou University</strong> (兰州大学). My empirical research investigates belowground resource facilitation mechanisms, root-zone soil moisture depletion, and plant–soil phosphorus partitioning in rainfed cereal–legume intercropping systems across semi-arid Loess Plateau drylands.
+                    <p class="text-sm leading-relaxed text-slate-100">
+                        I am a final-year Master's candidate in <strong class="text-white">Ecology</strong> (expected graduation in June 2027) at the <strong class="text-[#fbbf24]">College of Ecology, Lanzhou University</strong> (兰州大学). My empirical research investigates belowground resource facilitation mechanisms, root-zone soil moisture depletion, and plant–soil phosphorus partitioning in rainfed cereal–legume intercropping systems across semi-arid Loess Plateau drylands.
                     </p>
 
-                    <p class="text-sm leading-relaxed text-slate-700">
-                        Prior to graduate studies at Lanzhou University, I received my Bachelor of Engineering (B.Eng.) in Landscape Architecture from <strong class="text-slate-900">Northeast Forestry University</strong> (东北林业大学) in 2024, acquiring solid training in ecological site design, soil physical fundamentals, and geospatial modeling.
+                    <p class="text-sm leading-relaxed text-slate-100">
+                        Prior to graduate studies at Lanzhou University, I received my Bachelor of Engineering (B.Eng.) in Landscape Architecture from <strong class="text-white">Northeast Forestry University</strong> (东北林业大学) in 2024, acquiring solid training in ecological site design, soil physical fundamentals, and geospatial modeling.
                     </p>
 
                     <!-- Academic Status Callout -->
-                    <div class="bg-amber-50/70 border-l-4 border-amber-600 p-3.5 rounded-r-md text-xs text-amber-950 space-y-1">
-                        <strong class="font-bold flex items-center space-x-1.5">
-                            <i class="fa-solid fa-bullhorn text-amber-700"></i>
+                    <div class="bg-[#0b1e33] border-l-4 border-[#d4af37] p-4 rounded-r-md text-xs text-slate-100 space-y-1 shadow-inner">
+                        <strong class="font-bold flex items-center space-x-1.5 text-[#fbbf24]">
+                            <i class="fa-solid fa-bullhorn text-[#fbbf24]"></i>
                             <span>Target Objective for 2026/2027:</span>
                         </strong>
-                        <p class="leading-relaxed">
-                            Actively seeking a <strong>Doctoral (Ph.D.) Candidate</strong> or full-time <strong>Research Assistant (RA)</strong> position in sustainable agroecology, dryland cropping systems, intercropping, or plant–soil nutrient turnover. Eager to contribute extensive field plot trial experience, 96-well microplate colorimetric analytical workflows, and statistical modeling in R.
+                        <p class="leading-relaxed text-slate-200">
+                            Actively seeking a <strong class="text-white">Doctoral (Ph.D.) Candidate</strong> or full-time <strong class="text-white">Research Assistant (RA)</strong> position in sustainable agroecology, dryland cropping systems, intercropping, or plant–soil nutrient turnover. Eager to contribute extensive field plot trial experience, 96-well microplate colorimetric analytical workflows, and statistical modeling in R.
                         </p>
                     </div>
 
-                    <!-- Research Interests (Bulleted Academic Format) -->
+                    <!-- Research Interests -->
                     <div class="pt-2">
-                        <h3 class="text-base font-bold text-slate-900 mb-2 font-serif">Research Interests</h3>
-                        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-700 space-y-1.5">
-                            <li><strong>Dryland Agriculture & Rainfed Systems:</strong> In-situ soil moisture monitoring (0–100 cm depth), seasonal drought adaptation, and crop water productivity.</li>
-                            <li><strong>Cereal–Legume Intercropping:</strong> Interspecific subterranean facilitation, root spatial segregation, canopy microclimate, and overyielding dynamics.</li>
-                            <li><strong>Phosphorus Economy & Foliar Fractions:</strong> Dynamics of inorganic ($P_i$), metabolic ($P_M$), lipid ($P_L$), and nucleic acid ($P_N$) pools, membrane lipid remodeling, and phosphorus resorption efficiency (PRE).</li>
-                            <li><strong>High-Throughput Analytical Colorimetry:</strong> 96-well microplate spectrophotometric protocols for soil mineral nitrogen (ammonium-N, nitrate-N) and available phosphorus (Olsen-P).</li>
-                            <li><strong>Microbial Ecology & Spatial Modeling:</strong> Arid halo-alkalitolerant PGPR screening and regional suitability zoning using MaxEnt and QGIS.</li>
+                        <h3 class="text-base font-bold text-white mb-2 font-serif flex items-center space-x-2">
+                            <span class="w-2 h-2 rounded-full bg-[#fbbf24]"></span>
+                            <span>Research Interests</span>
+                        </h3>
+                        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-200 space-y-1.5">
+                            <li><strong class="text-white">Dryland Agriculture & Rainfed Systems:</strong> In-situ soil moisture monitoring (0–100 cm depth), seasonal drought adaptation, and crop water productivity.</li>
+                            <li><strong class="text-white">Cereal–Legume Intercropping:</strong> Interspecific subterranean facilitation, root spatial segregation, canopy microclimate, and overyielding dynamics.</li>
+                            <li><strong class="text-white">Phosphorus Economy & Foliar Fractions:</strong> Dynamics of inorganic ($P_i$), metabolic ($P_M$), lipid ($P_L$), and nucleic acid ($P_N$) pools, membrane lipid remodeling, and phosphorus resorption efficiency (PRE).</li>
+                            <li><strong class="text-white">High-Throughput Analytical Colorimetry:</strong> 96-well microplate spectrophotometric protocols for soil mineral nitrogen (ammonium-N, nitrate-N) and available phosphorus (Olsen-P).</li>
+                            <li><strong class="text-white">Microbial Ecology & Spatial Modeling:</strong> Arid halo-alkalitolerant PGPR screening and regional suitability zoning using MaxEnt and QGIS.</li>
                         </ul>
                     </div>
                 </section>
 
                 <!-- 2. FEATURED RESEARCH FRAMEWORK (Figure 7 Model) -->
                 <section id="framework" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900">Featured Research Framework</h2>
+                    <h2 class="academic-h2">Featured Research Framework</h2>
                     
-                    <div class="bg-slate-50 border border-[#e1e4e8] rounded-xl p-4 sm:p-6 space-y-4">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
+                    <div class="bg-[#0a1b30] border border-[rgba(212,175,55,0.35)] rounded-xl p-4 sm:p-6 space-y-4 shadow-md">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[rgba(212,175,55,0.25)] pb-3">
                             <div>
-                                <h3 class="text-base font-bold text-slate-900 font-serif">
+                                <h3 class="text-base font-bold text-white font-serif">
                                     Figure 7: Crop Phosphorus Economy & Cellular Remodeling Mechanism Model
                                 </h3>
-                                <p class="text-xs text-slate-500 mt-0.5">
+                                <p class="text-xs text-[#d4af37] mt-0.5">
                                     Whole-plant and subcellular allocation of phosphorus fractions ($P_i$, $P_M$, $P_L$, $P_N$) and membrane lipid substitution under phosphorus stress
                                 </p>
                             </div>
                             <button onclick="openModal('assets/figures/Fig7_Mechanism_Model.webp', 'Figure 7: Crop Phosphorus Economy & Cellular Remodeling Mechanism Model', 'Comprehensive conceptual model contrasting foliar phosphorus fraction partitioning (Pi, PM, PL, PN), membrane glycerolipid/phospholipid remodeling, and phosphorus resorption efficiency (PRE) during leaf expansion, maturation, and senescence across distinct phosphorus-use efficiency crop strategies.')" 
-                                    class="pub-btn self-start sm:self-auto shrink-0">
+                                    class="pub-btn primary self-start sm:self-auto shrink-0">
                                 <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Full Screen Zoom
                             </button>
                         </div>
 
                         <!-- Clickable Mechanism Banner -->
-                        <div class="rounded-lg overflow-hidden border border-slate-200 bg-white cursor-pointer group relative"
+                        <div class="rounded-lg overflow-hidden border border-[rgba(212,175,55,0.3)] bg-white cursor-pointer group relative p-1.5 shadow-inner"
                              onclick="openModal('assets/figures/Fig7_Mechanism_Model.webp', 'Figure 7: Crop Phosphorus Economy & Cellular Remodeling Mechanism Model', 'Comprehensive conceptual model contrasting foliar phosphorus fraction partitioning (Pi, PM, PL, PN), membrane glycerolipid/phospholipid remodeling, and phosphorus resorption efficiency (PRE) during leaf expansion, maturation, and senescence across distinct phosphorus-use efficiency crop strategies.')">
-                            <img src="assets/figures/Fig7_Mechanism_Model.webp" alt="Fig 7 Mechanism Model" class="w-full h-auto object-contain group-hover:scale-101 transition duration-300">
-                            <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/5 transition flex items-center justify-center">
-                                <span class="opacity-0 group-hover:opacity-100 transition px-3 py-1 rounded bg-white/95 text-slate-800 text-xs font-semibold shadow-xs">
-                                    Click to inspect 1800px High-Res
+                            <img src="assets/figures/Fig7_Mechanism_Model.webp" alt="Fig 7 Mechanism Model" class="w-full h-auto object-contain group-hover:scale-[1.01] transition duration-300 rounded">
+                            <div class="absolute inset-0 bg-[#071527]/0 group-hover:bg-[#071527]/20 transition flex items-center justify-center">
+                                <span class="opacity-0 group-hover:opacity-100 transition px-3.5 py-1.5 rounded-md bg-[#0a1b30] text-[#fbbf24] border border-[#d4af37] text-xs font-bold shadow-lg">
+                                    <i class="fa-solid fa-expand mr-1.5"></i>Click to Inspect 1800px High-Res
                                 </span>
                             </div>
                         </div>
 
                         <!-- Scientific Takeaways -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs text-slate-600">
-                            <div class="p-3 bg-white rounded border border-slate-200">
-                                <strong class="text-slate-900 block mb-1">1. Membrane Lipid Substitution ($P_L \to \text{SQDG/DGDG}$)</strong>
-                                <span>Replacing membrane phospholipids with sulfolipids and galactolipids maintains $P_i$ and $P_M$ above critical thresholds, sustaining net photosynthesis ($A$) and maximizing PPUE under P deficiency.</span>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1 text-xs">
+                            <div class="p-3 bg-[#0d2238] rounded-md border border-[rgba(212,175,55,0.25)] space-y-1">
+                                <strong class="text-[#fbbf24] block">1. Membrane Lipid Substitution ($P_L \to \text{SQDG/DGDG}$)</strong>
+                                <span class="text-slate-200">Replacing membrane phospholipids with sulfolipids and galactolipids maintains $P_i$ and $P_M$ above critical thresholds, sustaining net photosynthesis ($A$) and maximizing PPUE under P deficiency.</span>
                             </div>
-                            <div class="p-3 bg-white rounded border border-slate-200">
-                                <strong class="text-slate-900 block mb-1">2. Phosphorus Resorption Efficiency (PRE)</strong>
-                                <span>High-PUE species remobilize up to ~70% of foliar P during senescence, where $P_i$ (63%) and $P_L$ (16%) govern the export gradient, mitigating soil nutrient exhaustion in drylands.</span>
+                            <div class="p-3 bg-[#0d2238] rounded-md border border-[rgba(212,175,55,0.25)] space-y-1">
+                                <strong class="text-[#fbbf24] block">2. Phosphorus Resorption Efficiency (PRE)</strong>
+                                <span class="text-slate-200">High-PUE species remobilize up to ~70% of foliar P during senescence, where $P_i$ (63%) and $P_L$ (16%) govern the export gradient, mitigating soil nutrient exhaustion in drylands.</span>
                             </div>
                         </div>
                     </div>
@@ -346,47 +393,47 @@
 
                 <!-- 3. PUBLICATIONS & PREPRINTS (AcademicPages Style) -->
                 <section id="publications" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900">Publications & Manuscripts in Preparation</h2>
+                    <h2 class="academic-h2">Publications & Manuscripts in Preparation</h2>
 
                     <div class="space-y-4">
                         
                         <!-- Paper 1 -->
-                        <div class="p-4 rounded-lg border border-[#e1e4e8] bg-slate-50/50 space-y-2">
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/90 space-y-2.5">
                             <div class="flex items-center space-x-2">
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">Manuscript in Final Preparation</span>
-                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">Manuscript in Final Preparation</span>
+                                <span class="text-xs text-slate-300 font-mono">2026</span>
                             </div>
-                            <h3 class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug">
                                 Coordinated leaf phosphorus allocation and membrane lipid remodeling enhance photosynthetic phosphorus-use efficiency in dryland crops
                             </h3>
-                            <p class="text-xs text-slate-600">
-                                <strong>Xiaoyu Lyu</strong>, et al.
+                            <p class="text-xs text-slate-200">
+                                <strong class="text-[#fbbf24]">Xiaoyu Lyu (吕晓宇)</strong>, et al.
                             </p>
-                            <p class="text-xs text-slate-500 italic">
-                                Target Journal: <em>Agriculture, Ecosystems & Environment</em> (Submission Draft)
+                            <p class="text-xs text-slate-300 italic">
+                                Target Journal: <em class="text-[#fbbf24]">Agriculture, Ecosystems & Environment</em> (Submission Draft)
                             </p>
 
                             <!-- Interactive Buttons: Abstract & BibTeX -->
-                            <div class="pt-1">
+                            <div class="pt-1 flex flex-wrap gap-1">
                                 <button onclick="toggleBox('abs1')" class="pub-btn">
-                                    <i class="fa-solid fa-align-left mr-1"></i>Abstract
+                                    <i class="fa-solid fa-align-left mr-1 text-[#fbbf24]"></i>Abstract
                                 </button>
                                 <button onclick="toggleBox('bib1')" class="pub-btn">
-                                    <i class="fa-solid fa-quote-right mr-1"></i>BibTeX
+                                    <i class="fa-solid fa-quote-right mr-1 text-[#fbbf24]"></i>BibTeX
                                 </button>
                                 <a href="#framework" class="pub-btn">
-                                    <i class="fa-solid fa-chart-line mr-1"></i>Related Figure 7
+                                    <i class="fa-solid fa-chart-line mr-1 text-[#fbbf24]"></i>Related Figure 7
                                 </a>
                             </div>
 
                             <!-- Expandable Abstract -->
                             <div id="abs1" class="expand-box">
-                                <strong class="text-slate-800 block mb-1">Abstract:</strong>
+                                <strong class="text-[#fbbf24] block mb-1">Abstract:</strong>
                                 Crop adaptations to low phosphorus in semi-arid drylands depend on how plants partition limited P among subcellular fractions and reorganize cellular membranes. This study investigates the ontogenetic dynamics of leaf inorganic-P ($P_i$), metabolic-P ($P_M$), lipid-P ($P_L$), and nucleic acid-P ($P_N$) across contrasting PUE crop regimes. Results reveal that targeted sulfolipid and galactolipid substitution for membrane phospholipids preserves $P_i$ and $P_M$ pools above critical thresholds, mitigating photosynthetic depression and enhancing photosynthetic phosphorus-use efficiency (PPUE) across vegetative growth.
                             </div>
 
                             <!-- Expandable BibTeX -->
-                            <div id="bib1" class="expand-box font-mono text-[11px] text-slate-700 whitespace-pre">@article{lyu2026phosphorus,
+                            <div id="bib1" class="expand-box font-mono text-[11px] text-[#fde68a] whitespace-pre">@article{lyu2026phosphorus,
   title={Coordinated leaf phosphorus allocation and membrane lipid remodeling enhance photosynthetic phosphorus-use efficiency in dryland crops},
   author={Lyu, Xiaoyu and others},
   journal={Agriculture, Ecosystems & Environment},
@@ -396,42 +443,42 @@
                         </div>
 
                         <!-- Paper 2 -->
-                        <div class="p-4 rounded-lg border border-[#e1e4e8] bg-slate-50/50 space-y-2">
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/90 space-y-2.5">
                             <div class="flex items-center space-x-2">
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Dataset Analysis & Draft</span>
-                                <span class="text-xs text-slate-400 font-mono">2026</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">Dataset Analysis & Draft</span>
+                                <span class="text-xs text-slate-300 font-mono">2026</span>
                             </div>
-                            <h3 class="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug">
                                 Depth-stratified soil moisture facilitation and phosphorus fractions dynamics under semi-arid cereal–legume cropping systems
                             </h3>
-                            <p class="text-xs text-slate-600">
-                                <strong>Xiaoyu Lyu</strong>, et al.
+                            <p class="text-xs text-slate-200">
+                                <strong class="text-[#fbbf24]">Xiaoyu Lyu (吕晓宇)</strong>, et al.
                             </p>
-                            <p class="text-xs text-slate-500 italic">
-                                Target Journal: <em>Field Crops Research / Plant and Soil</em>
+                            <p class="text-xs text-slate-300 italic">
+                                Target Journal: <em class="text-[#fbbf24]">Field Crops Research / Plant and Soil</em>
                             </p>
 
                             <!-- Interactive Buttons -->
-                            <div class="pt-1">
+                            <div class="pt-1 flex flex-wrap gap-1">
                                 <button onclick="toggleBox('abs2')" class="pub-btn">
-                                    <i class="fa-solid fa-align-left mr-1"></i>Abstract
+                                    <i class="fa-solid fa-align-left mr-1 text-[#fbbf24]"></i>Abstract
                                 </button>
                                 <button onclick="toggleBox('bib2')" class="pub-btn">
-                                    <i class="fa-solid fa-quote-right mr-1"></i>BibTeX
+                                    <i class="fa-solid fa-quote-right mr-1 text-[#fbbf24]"></i>BibTeX
                                 </button>
                                 <a href="#projects" class="pub-btn">
-                                    <i class="fa-solid fa-seedling mr-1"></i>Trial Details
+                                    <i class="fa-solid fa-seedling mr-1 text-[#fbbf24]"></i>Trial Details
                                 </a>
                             </div>
 
                             <!-- Expandable Abstract -->
                             <div id="abs2" class="expand-box">
-                                <strong class="text-slate-800 block mb-1">Abstract:</strong>
+                                <strong class="text-[#fbbf24] block mb-1">Abstract:</strong>
                                 Cereal–legume intercropping has been widely recognized for sustainable intensification in water-limited drylands, yet depth-stratified interactions between root-zone water depletion and phosphorus fractions turnover remain incompletely resolved. We conducted multi-depth (0–100 cm) soil moisture profiling and high-throughput 96-well colorimetric determinations of soil mineral nitrogen and Olsen-P across maize intercropped with companion legumes (lablab bean and forage soybean). Linear mixed-effects modeling showed that complementary root architecture mitigated drought penalties in upper layers while facilitating phosphorus mobilization in deeper horizons.
                             </div>
 
                             <!-- Expandable BibTeX -->
-                            <div id="bib2" class="expand-box font-mono text-[11px] text-slate-700 whitespace-pre">@article{lyu2026intercropping,
+                            <div id="bib2" class="expand-box font-mono text-[11px] text-[#fde68a] whitespace-pre">@article{lyu2026intercropping,
   title={Depth-stratified soil moisture facilitation and phosphorus fractions dynamics under semi-arid cereal--legume cropping systems},
   author={Lyu, Xiaoyu and others},
   journal={Field Crops Research},
@@ -445,49 +492,49 @@
 
                 <!-- 4. EMPIRICAL RESEARCH PROJECTS -->
                 <section id="projects" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900">Research Projects & Field Campaigns</h2>
+                    <h2 class="academic-h2">Research Projects & Field Campaigns</h2>
 
                     <div class="space-y-4">
 
                         <!-- Project 1 -->
-                        <div class="p-4 sm:p-5 rounded-lg border border-[#e1e4e8] bg-white space-y-2">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-500 gap-1">
-                                <span class="font-bold text-slate-900 text-sm">Dryland Rainfed Maize–Legume Intercropping & Moisture Dynamics</span>
-                                <span class="font-mono text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">2025.04 – Present</span>
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
+                                <span class="font-bold text-white text-sm">Dryland Rainfed Maize–Legume Intercropping & Moisture Dynamics</span>
+                                <span class="font-mono text-[#fbbf24] bg-[#d4af37]/15 px-2 py-0.5 rounded border border-[#d4af37]/40">2025.04 – Present</span>
                             </div>
-                            <p class="text-xs text-slate-500 italic">Graduate Research Assistant · College of Ecology, Lanzhou University</p>
-                            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1 leading-relaxed">
-                                <li><strong>Field Trial Design:</strong> Established and managed large-scale rainfed plot experiments on the semi-arid Loess Plateau comparing monoculture maize against intercrops with lablab bean (<em>Lablab purpureus</em>) and forage soybean (<em>Glycine max</em>) in split-plot and RCBD arrangements.</li>
-                                <li><strong>In-Situ Moisture Profiling:</strong> Deployed time-domain reflectometry (TDR) probes to log continuous root-zone soil water content across 0–20, 20–40, 40–60, and 60–100 cm depth profiles throughout critical vegetative and grain-filling stages.</li>
-                                <li><strong>Facilitation Evaluation:</strong> Quantified root spatial partition, canopy light interception, and crop water productivity to discern hydrological facilitation from competitive yield penalties.</li>
+                            <p class="text-xs text-[#d4af37] italic">Graduate Research Assistant · College of Ecology, Lanzhou University</p>
+                            <ul class="list-disc list-inside text-xs text-slate-200 space-y-1.5 leading-relaxed">
+                                <li><strong class="text-white">Field Trial Design:</strong> Established and managed large-scale rainfed plot experiments on the semi-arid Loess Plateau comparing monoculture maize against intercrops with lablab bean (<em>Lablab purpureus</em>) and forage soybean (<em>Glycine max</em>) in split-plot and RCBD arrangements.</li>
+                                <li><strong class="text-white">In-Situ Moisture Profiling:</strong> Deployed time-domain reflectometry (TDR) probes to log continuous root-zone soil water content across 0–20, 20–40, 40–60, and 60–100 cm depth profiles throughout critical vegetative and grain-filling stages.</li>
+                                <li><strong class="text-white">Facilitation Evaluation:</strong> Quantified root spatial partition, canopy light interception, and crop water productivity to discern hydrological facilitation from competitive yield penalties.</li>
                             </ul>
                         </div>
 
                         <!-- Project 2 -->
-                        <div class="p-4 sm:p-5 rounded-lg border border-[#e1e4e8] bg-white space-y-2">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-500 gap-1">
-                                <span class="font-bold text-slate-900 text-sm">High-Throughput Microplate Assays for Soil Mineral Nitrogen & Available Phosphorus</span>
-                                <span class="font-mono text-lzu bg-blue-50 px-2 py-0.5 rounded border border-blue-200">2025.04 – Present</span>
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
+                                <span class="font-bold text-white text-sm">High-Throughput Microplate Assays for Soil Mineral Nitrogen & Available Phosphorus</span>
+                                <span class="font-mono text-[#fbbf24] bg-[#d4af37]/15 px-2 py-0.5 rounded border border-[#d4af37]/40">2025.04 – Present</span>
                             </div>
-                            <p class="text-xs text-slate-500 italic">Analytical Wet-Lab Optimization & Stoichiometric Profiling · Lanzhou University</p>
-                            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1 leading-relaxed">
-                                <li><strong>Instrumentation:</strong> Optimized 96-well colorimetric microplate reader spectrophotometry protocols for simultaneous batch determinations of soil ammonium-N ($NH_4^+-N$), nitrate-N ($NO_3^--N$), and Olsen-P.</li>
-                                <li><strong>Rigorous QA/QC:</strong> Established 8-point linear standard curves ($R^2 > 0.999$), matrix optical correction in saline extracts, and internal spike-recovery verification (95–104%).</li>
-                                <li><strong>Sample Processing:</strong> Successfully handled 700+ dryland core samples to characterize vertical C:N:P stoichiometry and subterranean nutrient cycling.</li>
+                            <p class="text-xs text-[#d4af37] italic">Analytical Wet-Lab Optimization & Stoichiometric Profiling · Lanzhou University</p>
+                            <ul class="list-disc list-inside text-xs text-slate-200 space-y-1.5 leading-relaxed">
+                                <li><strong class="text-white">Instrumentation:</strong> Optimized 96-well colorimetric microplate reader spectrophotometry protocols for simultaneous batch determinations of soil ammonium-N ($NH_4^+-N$), nitrate-N ($NO_3^--N$), and Olsen-P.</li>
+                                <li><strong class="text-white">Rigorous QA/QC:</strong> Established 8-point linear standard curves ($R^2 > 0.999$), matrix optical correction in saline extracts, and internal spike-recovery verification (95–104%).</li>
+                                <li><strong class="text-white">Sample Processing:</strong> Successfully handled 700+ dryland core samples to characterize vertical C:N:P stoichiometry and subterranean nutrient cycling.</li>
                             </ul>
                         </div>
 
                         <!-- Project 3 -->
-                        <div class="p-4 sm:p-5 rounded-lg border border-[#e1e4e8] bg-white space-y-2">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-slate-500 gap-1">
-                                <span class="font-bold text-slate-900 text-sm">Arid Saline-Alkali Soil Microbiology & Agroecological Spatial Suitability</span>
-                                <span class="font-mono text-indigo-800 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">2025.10 – 2026.06</span>
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-1">
+                                <span class="font-bold text-white text-sm">Arid Saline-Alkali Soil Microbiology & Agroecological Spatial Suitability</span>
+                                <span class="font-mono text-[#fbbf24] bg-[#d4af37]/15 px-2 py-0.5 rounded border border-[#d4af37]/40">2025.10 – 2026.06</span>
                             </div>
-                            <p class="text-xs text-slate-500 italic">Functional Bacterial Isolation & MaxEnt Environmental Niche Modeling</p>
-                            <ul class="list-disc list-inside text-xs text-slate-600 space-y-1 leading-relaxed">
-                                <li><strong>Aseptic Isolation:</strong> Collected core samples along natural saline-alkali gradients in Northwest China; performed streak-plate isolation, morphotyping, and cryopreservation of halo-alkalitolerant plant-growth-promoting bacteria.</li>
-                                <li><strong>Spatial Modeling:</strong> Integrated occurrence points with WorldClim bioclimatic and ISRIC soil raster grids in MaxEnt to predict climatic suitability thresholds and drought resilience boundaries.</li>
-                                <li><strong>QGIS Mapping:</strong> Executed spatial overlay and terrain zoning in QGIS to delineate regional dryland crop adaptation zones.</li>
+                            <p class="text-xs text-[#d4af37] italic">Functional Bacterial Isolation & MaxEnt Environmental Niche Modeling</p>
+                            <ul class="list-disc list-inside text-xs text-slate-200 space-y-1.5 leading-relaxed">
+                                <li><strong class="text-white">Aseptic Isolation:</strong> Collected core samples along natural saline-alkali gradients in Northwest China; performed streak-plate isolation, morphotyping, and cryopreservation of halo-alkalitolerant plant-growth-promoting bacteria.</li>
+                                <li><strong class="text-white">Spatial Modeling:</strong> Integrated occurrence points with WorldClim bioclimatic and ISRIC soil raster grids in MaxEnt to predict climatic suitability thresholds and drought resilience boundaries.</li>
+                                <li><strong class="text-white">QGIS Mapping:</strong> Executed spatial overlay and terrain zoning in QGIS to delineate regional dryland crop adaptation zones.</li>
                             </ul>
                         </div>
 
@@ -496,88 +543,88 @@
 
                 <!-- 5. PUBLICATION RESEARCH FIGURES GALLERY -->
                 <section id="figures" class="space-y-4">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b-2 border-[#e1e4e8] pb-1.5 mt-8 mb-4">
-                        <h2 class="text-xl font-bold text-slate-900 m-0">Research Figures Gallery</h2>
-                        <span class="text-xs text-slate-500 font-sans">Click any figure for full 1800px lightbox view</span>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b-2 border-[rgba(212,175,55,0.35)] pb-1.5 mt-8 mb-4">
+                        <h2 class="text-xl font-bold text-white m-0">Research Figures Gallery</h2>
+                        <span class="text-xs text-[#fbbf24] font-sans">Click any figure for full 1800px lightbox view</span>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
                         <!-- Fig 1 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig1_Growth_Photosynthesis.webp', 'Figure 1: Growth, Biomass & Photosynthetic Gas Exchange Responses', 'Comparative analysis of leaf area (cm²), foliar P content (mg), net assimilation rate A (μmol m⁻² s⁻¹), photosynthetic phosphorus-use efficiency PPUE, and leaf phosphorus per area (Parea) across normalized leaf expansion, maturation, and senescence stages under Low (LP), Medium (MP), and Control (Ctrl) conditions.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig1_Growth_Photosynthesis_thumb.webp" alt="Fig 1" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 1</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">Plant Growth & Gas Exchange ($A$, PPUE)</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Biomass expansion, net assimilation, and PPUE under P gradients.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 1</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Plant Growth & Gas Exchange ($A$, PPUE)</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Biomass expansion, net assimilation, and PPUE under P gradients.</p>
                             </div>
                         </div>
 
                         <!-- Fig 2 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig2_P_Fractions_Dynamics.webp', 'Figure 2: Temporal Dynamics of Leaf Phosphorus Chemical Fractions', 'Temporal concentration profiles (mg m⁻²) of leaf inorganic-P (Pi), metabolite P (PM), lipid P (PL), nucleic acid P (PN), and residual P over days after emergence under LP, MP, and Ctrl regimes. Different uppercase and lowercase letters represent significant differences (P < 0.05) based on two-way ANOVA and post-hoc Tukey tests.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig2_P_Fractions_Dynamics_thumb.webp" alt="Fig 2" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 2</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">Leaf Phosphorus Fractions Dynamics</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Temporal tracking of $P_i$, $P_M$, $P_L$, and $P_N$ across ontogeny.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 2</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Leaf Phosphorus Fractions Dynamics</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Temporal tracking of $P_i$, $P_M$, $P_L$, and $P_N$ across ontogeny.</p>
                             </div>
                         </div>
 
                         <!-- Fig 3 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig3_PPUE_Coordination.webp', 'Figure 3: Coordination Between Phosphorus Fractions and Photosynthetic Rate', 'Bivariate linear regressions correlating net photosynthetic rate (A) and photosynthetic phosphorus-use efficiency (PPUE) with relative proportions of leaf inorganic-P, metabolite P, lipid P, nucleic acid P, and residual P across growth stages, highlighting functional trade-offs and threshold effects.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig3_PPUE_Coordination_thumb.webp" alt="Fig 3" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 3</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">PPUE & P-Fraction Regressions</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Bivariate trait coupling and threshold regressions with assimilation.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 3</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">PPUE & P-Fraction Regressions</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Bivariate trait coupling and threshold regressions with assimilation.</p>
                             </div>
                         </div>
 
                         <!-- Fig 4 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig4_Lipid_Remodeling.webp', 'Figure 4: Membrane Glycerolipid and Phospholipid Remodeling', 'Molecular species composition and shifts between phospholipids (PG, PC, PE, PI) and non-phospholipids (galactolipids MGDG, DGDG; sulfolipid SQDG) in thylakoid and extraplastidic membranes under phosphorus stress and developmental senescence.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig4_Lipid_Remodeling_thumb.webp" alt="Fig 4" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 4</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">Membrane Lipid Remodeling</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Glycerolipid & phospholipid replacement under starvation.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 4</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Membrane Lipid Remodeling</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Glycerolipid & phospholipid replacement under starvation.</p>
                             </div>
                         </div>
 
                         <!-- Fig 5 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig5_PUE_Resorption.webp', 'Figure 5: Foliar Phosphorus Resorption Efficiency (PRE) Dynamics', 'Nutrient resorption efficiency and proficiency evaluated in green vs senescent leaves, quantifying the percentage remobilization of individual P chemical pools back into developing sink organs.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig5_PUE_Resorption_thumb.webp" alt="Fig 5" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 5</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">Phosphorus Resorption Efficiency (PRE)</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Nutrient resorption proficiency during foliar senescence.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 5</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Phosphorus Resorption Efficiency (PRE)</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Nutrient resorption proficiency during foliar senescence.</p>
                             </div>
                         </div>
 
                         <!-- Fig 6 -->
-                        <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-white hover:border-[#175683] transition cursor-pointer group"
+                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
                              onclick="openModal('assets/figures/Fig6_Photosynthesis_Resorption.webp', 'Figure 6: Photosynthetic Coordination with Nutrient Mobilization', 'Integrated functional coordination linking carbon assimilation capacity, chlorophyll retention, and leaf nitrogen/phosphorus resorption across diverse crop species.')">
-                            <div class="p-2 bg-slate-50 border-b border-[#e1e4e8]">
+                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
                                 <img src="assets/figures/Fig6_Photosynthesis_Resorption_thumb.webp" alt="Fig 6" class="w-full h-36 object-contain group-hover:scale-102 transition">
                             </div>
                             <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-slate-400 font-bold block">FIGURE 6</span>
-                                <h4 class="text-xs font-bold text-slate-800 group-hover:text-lzu transition line-clamp-1">Photosynthesis & Resorption Coupling</h4>
-                                <p class="text-[11px] text-slate-500 line-clamp-2">Coordination between carbon fixation and nutrient export.</p>
+                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 6</span>
+                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Photosynthesis & Resorption Coupling</h4>
+                                <p class="text-[11px] text-slate-300 line-clamp-2">Coordination between carbon fixation and nutrient export.</p>
                             </div>
                         </div>
 
@@ -586,17 +633,17 @@
 
                 <!-- 6. METHODOLOGY & TECHNICAL COMPETENCIES -->
                 <section id="pipeline" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900">Technical & Laboratory Pipeline</h2>
+                    <h2 class="academic-h2">Technical & Laboratory Pipeline</h2>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
                         
                         <!-- Col 1 -->
-                        <div class="p-4 rounded-lg border border-[#e1e4e8] bg-slate-50/50 space-y-2">
-                            <div class="font-bold text-slate-900 flex items-center space-x-1.5 text-sm">
-                                <i class="fa-solid fa-wheat-awn text-emerald-700"></i>
+                        <div class="p-4 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="font-bold text-white flex items-center space-x-1.5 text-sm">
+                                <i class="fa-solid fa-wheat-awn text-[#fbbf24]"></i>
                                 <span>Field Agronomy</span>
                             </div>
-                            <ul class="space-y-1.5 text-slate-600">
+                            <ul class="space-y-1.5 text-slate-200">
                                 <li>• Rainfed experimental layout (split-plot, RCBD) under drought stress</li>
                                 <li>• Deep soil coring across 0–20, 20–40, 40–60, 60–100 cm depth profiles</li>
                                 <li>• In-situ TDR probe calibration and continuous soil moisture tracking</li>
@@ -605,12 +652,12 @@
                         </div>
 
                         <!-- Col 2 -->
-                        <div class="p-4 rounded-lg border border-[#e1e4e8] bg-slate-50/50 space-y-2">
-                            <div class="font-bold text-slate-900 flex items-center space-x-1.5 text-sm">
-                                <i class="fa-solid fa-vial-virus text-amber-700"></i>
+                        <div class="p-4 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="font-bold text-white flex items-center space-x-1.5 text-sm">
+                                <i class="fa-solid fa-vial-virus text-[#fbbf24]"></i>
                                 <span>Analytical Wet Lab</span>
                             </div>
-                            <ul class="space-y-1.5 text-slate-600">
+                            <ul class="space-y-1.5 text-slate-200">
                                 <li>• 96-well microplate colorimetry for soil ammonium-N, nitrate-N & Olsen-P</li>
                                 <li>• 8-point standard curves ($R^2 > 0.999$) with spike-recovery verification</li>
                                 <li>• Streak-plate purification and cryopreservation of halo-alkali PGPR</li>
@@ -619,12 +666,12 @@
                         </div>
 
                         <!-- Col 3 -->
-                        <div class="p-4 rounded-lg border border-[#e1e4e8] bg-slate-50/50 space-y-2">
-                            <div class="font-bold text-slate-900 flex items-center space-x-1.5 text-sm">
-                                <i class="fa-solid fa-chart-pie text-indigo-700"></i>
+                        <div class="p-4 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/80 space-y-2">
+                            <div class="font-bold text-white flex items-center space-x-1.5 text-sm">
+                                <i class="fa-solid fa-chart-pie text-[#fbbf24]"></i>
                                 <span>Quantitative Modeling</span>
                             </div>
-                            <ul class="space-y-1.5 text-slate-600">
+                            <ul class="space-y-1.5 text-slate-200">
                                 <li>• R statistical modeling: Linear mixed-effects (`lme4`), two-way ANOVA, ggplot2</li>
                                 <li>• MaxEnt ecological niche modeling for climatic suitability boundaries</li>
                                 <li>• QGIS spatial overlays, DEM topographic slope/aspect zoning</li>
@@ -637,45 +684,47 @@
 
                 <!-- 7. EDUCATION -->
                 <section id="education" class="space-y-4">
-                    <h2 class="academic-h2 text-slate-900">Education</h2>
+                    <h2 class="academic-h2">Education</h2>
 
                     <div class="space-y-4">
                         
                         <!-- LZU -->
-                        <div class="flex flex-col sm:flex-row justify-between items-start gap-1 pb-3 border-b border-[#e1e4e8]">
+                        <div class="flex flex-col sm:flex-row justify-between items-start gap-1 pb-3 border-b border-[rgba(212,175,55,0.25)]">
                             <div>
-                                <h3 class="text-sm sm:text-base font-bold text-slate-900">
-                                    Lanzhou University (兰州大学)
+                                <h3 class="text-sm sm:text-base font-bold text-white flex items-center space-x-2">
+                                    <span>Lanzhou University (兰州大学)</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">985 / 双一流</span>
                                 </h3>
-                                <p class="text-xs text-slate-700 font-medium">
+                                <p class="text-xs text-slate-200 font-medium mt-0.5">
                                     Master of Science (M.Sc.) in Ecology · College of Ecology
                                 </p>
-                                <p class="text-xs text-slate-500">
+                                <p class="text-xs text-slate-300">
                                     Research: Dryland Agriculture, Maize–Legume Intercropping, and Belowground Nutrient Turnover
                                 </p>
                             </div>
                             <div class="sm:text-right shrink-0">
-                                <span class="font-mono text-xs font-bold text-slate-700">GPA: 87.3 / 100</span>
-                                <span class="block text-[11px] text-slate-400 font-mono">2024.09 – 2027.06 (Expected)</span>
+                                <span class="font-mono text-xs font-bold text-[#fbbf24] bg-[#071527] px-2 py-1 rounded border border-[rgba(212,175,55,0.35)]">GPA: 87.3 / 100</span>
+                                <span class="block text-[11px] text-slate-400 font-mono mt-1">2024.09 – 2027.06 (Expected)</span>
                             </div>
                         </div>
 
                         <!-- NEFU -->
                         <div class="flex flex-col sm:flex-row justify-between items-start gap-1">
                             <div>
-                                <h3 class="text-sm sm:text-base font-bold text-slate-900">
-                                    Northeast Forestry University (东北林业大学)
+                                <h3 class="text-sm sm:text-base font-bold text-white flex items-center space-x-2">
+                                    <span>Northeast Forestry University (东北林业大学)</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">211 / 双一流</span>
                                 </h3>
-                                <p class="text-xs text-slate-700 font-medium">
+                                <p class="text-xs text-slate-200 font-medium mt-0.5">
                                     Bachelor of Engineering (B.Eng.) in Landscape Architecture · College of Landscape Architecture
                                 </p>
-                                <p class="text-xs text-slate-500">
+                                <p class="text-xs text-slate-300">
                                     Coursework in environmental ecology, botany, soil science fundamentals, and spatial AutoCAD design
                                 </p>
                             </div>
                             <div class="sm:text-right shrink-0">
-                                <span class="font-mono text-xs font-bold text-slate-700">GPA: 85.17 / 100</span>
-                                <span class="block text-[11px] text-slate-400 font-mono">2020.09 – 2024.06</span>
+                                <span class="font-mono text-xs font-bold text-[#fbbf24] bg-[#071527] px-2 py-1 rounded border border-[rgba(212,175,55,0.35)]">GPA: 85.17 / 100</span>
+                                <span class="block text-[11px] text-slate-400 font-mono mt-1">2020.09 – 2024.06</span>
                             </div>
                         </div>
 
@@ -684,18 +733,18 @@
 
                 <!-- 8. CURRICULUM VITAE EMBED -->
                 <section id="cv" class="space-y-4">
-                    <div class="flex items-center justify-between border-b-2 border-[#e1e4e8] pb-1.5 mt-8 mb-4">
-                        <h2 class="text-xl font-bold text-slate-900 m-0">Curriculum Vitae</h2>
+                    <div class="flex items-center justify-between border-b-2 border-[rgba(212,175,55,0.35)] pb-1.5 mt-8 mb-4">
+                        <h2 class="text-xl font-bold text-white m-0">Curriculum Vitae</h2>
                         <a href="Xiaoyu_Lyu_CV.pdf" download="Xiaoyu_Lyu_CV.pdf" class="pub-btn primary">
                             <i class="fa-solid fa-download mr-1"></i>Download PDF
                         </a>
                     </div>
 
-                    <div class="border border-[#e1e4e8] rounded-lg overflow-hidden bg-slate-100 shadow-2xs">
+                    <div class="border border-[rgba(212,175,55,0.35)] rounded-lg overflow-hidden bg-[#071527] shadow-md">
                         <iframe src="Xiaoyu_Lyu_CV.pdf" class="w-full h-[650px]" frameborder="0">
-                            <p class="p-6 text-center text-xs text-slate-500">
+                            <p class="p-6 text-center text-xs text-slate-300">
                                 Your browser does not support inline PDF viewing. 
-                                <a href="Xiaoyu_Lyu_CV.pdf" class="text-academic-blue underline font-bold ml-1">Download CV directly.</a>
+                                <a href="Xiaoyu_Lyu_CV.pdf" class="text-[#fbbf24] underline font-bold ml-1">Download CV directly.</a>
                             </p>
                         </iframe>
                     </div>
@@ -703,26 +752,26 @@
 
                 <!-- 9. CONTACT -->
                 <section id="contact" class="space-y-4 pt-2">
-                    <h2 class="academic-h2 text-slate-900">Contact & Inquiries</h2>
+                    <h2 class="academic-h2">Contact & Inquiries</h2>
 
-                    <div class="bg-slate-50 border border-[#e1e4e8] rounded-xl p-5 sm:p-6 space-y-3">
-                        <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                            I am actively seeking <strong>Doctoral (Ph.D.)</strong> openings and <strong>Research Assistantships</strong>. Feel free to contact me regarding research exchange, ongoing trial data, or prospective academic appointments.
+                    <div class="bg-[#0a1c30] border border-[rgba(212,175,55,0.35)] rounded-xl p-5 sm:p-6 space-y-3 shadow-md">
+                        <p class="text-xs sm:text-sm text-slate-100 leading-relaxed">
+                            I am actively seeking <strong class="text-white">Doctoral (Ph.D.)</strong> openings and <strong class="text-white">Research Assistantships</strong>. Feel free to contact me regarding research exchange, ongoing trial data, or prospective academic appointments.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
-                            <div class="p-3 bg-white rounded border border-[#e1e4e8] space-y-1">
-                                <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Direct Email</span>
-                                <a href="mailto:xiaoyu.lyu01@gmail.com" class="text-academic-blue font-bold hover:underline">xiaoyu.lyu01@gmail.com</a>
+                            <div class="p-3 bg-[#0d2238] rounded border border-[rgba(212,175,55,0.3)] space-y-1">
+                                <span class="text-[#fbbf24] text-[10px] font-bold uppercase tracking-wider block">Direct Email</span>
+                                <a href="mailto:xiaoyu.lyu01@gmail.com" class="text-white font-bold hover:text-[#fbbf24] hover:underline transition">xiaoyu.lyu01@gmail.com</a>
                             </div>
-                            <div class="p-3 bg-white rounded border border-[#e1e4e8] space-y-1">
-                                <span class="text-slate-400 text-[10px] font-bold uppercase tracking-wider block">Office & Lab</span>
-                                <span class="text-slate-700">College of Ecology, Lanzhou University, Lanzhou, China</span>
+                            <div class="p-3 bg-[#0d2238] rounded border border-[rgba(212,175,55,0.3)] space-y-1">
+                                <span class="text-[#fbbf24] text-[10px] font-bold uppercase tracking-wider block">Office & Lab</span>
+                                <span class="text-slate-200">College of Ecology, Lanzhou University, Lanzhou, China</span>
                             </div>
                         </div>
 
                         <div class="pt-2">
-                            <a href="mailto:xiaoyu.lyu01@gmail.com?subject=PhD%20Opportunity%20Inquiry%20-%20Xiaoyu%20Lyu" class="pub-btn primary py-2 px-4 text-xs font-semibold">
+                            <a href="mailto:xiaoyu.lyu01@gmail.com?subject=PhD%20Opportunity%20Inquiry%20-%20Xiaoyu%20Lyu" class="pub-btn primary py-2.5 px-5 text-xs font-semibold">
                                 <i class="fa-solid fa-paper-plane mr-1.5"></i>Compose Direct Email to Xiaoyu Lyu
                             </a>
                         </div>
@@ -735,31 +784,34 @@
     </div>
 
     <!-- Interactive Lightbox Modal for Figures -->
-    <div id="figureModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-xs hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-3 sm:p-6" onclick="closeModalOnBackdrop(event)">
-        <div class="bg-white rounded-xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl flex flex-col border border-[#e1e4e8] transform scale-95 transition-transform duration-200" id="modalContainer">
+    <div id="figureModal" class="fixed inset-0 z-50 bg-[#040c17]/90 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200 flex items-center justify-center p-3 sm:p-6" onclick="closeModalOnBackdrop(event)">
+        <div class="bg-[#0b1e33] rounded-xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl flex flex-col border border-[rgba(212,175,55,0.4)] transform scale-95 transition-transform duration-200" id="modalContainer">
             <!-- Modal Header -->
-            <div class="px-5 py-3 border-b border-[#e1e4e8] flex items-center justify-between bg-slate-50 shrink-0">
-                <h3 class="font-bold text-xs sm:text-sm text-slate-900" id="modalTitle">Figure Inspection</h3>
-                <button onclick="closeModal()" class="w-7 h-7 rounded border border-slate-300 text-slate-500 hover:text-slate-900 flex items-center justify-center transition">
+            <div class="px-5 py-3 border-b border-[rgba(212,175,55,0.25)] flex items-center justify-between bg-[#071629] shrink-0">
+                <div class="flex items-center space-x-2">
+                    <span class="w-2 h-2 rounded-full bg-[#fbbf24]"></span>
+                    <h3 class="font-bold text-xs sm:text-sm text-white" id="modalTitle">Figure Inspection</h3>
+                </div>
+                <button onclick="closeModal()" class="w-7 h-7 rounded border border-[rgba(212,175,55,0.4)] text-slate-300 hover:text-white hover:border-[#fbbf24] flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark text-sm"></i>
                 </button>
             </div>
 
             <!-- Modal Content -->
             <div class="overflow-y-auto custom-scroll p-4 sm:p-6 space-y-4">
-                <div class="bg-slate-100 rounded-lg p-2 border border-[#e1e4e8] flex items-center justify-center">
+                <div class="bg-white rounded-lg p-2.5 border border-[rgba(212,175,55,0.3)] flex items-center justify-center shadow-inner">
                     <img id="modalImg" src="" alt="Figure Preview" class="max-h-[65vh] w-auto object-contain rounded">
                 </div>
-                <div class="bg-slate-50 p-4 rounded-lg border border-[#e1e4e8] space-y-1">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Scientific Caption & Interpretation</span>
-                    <p id="modalCaption" class="text-xs text-slate-700 leading-relaxed font-sans"></p>
+                <div class="bg-[#071629] p-4 rounded-lg border border-[rgba(212,175,55,0.25)] space-y-1">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-[#fbbf24]">Scientific Caption & Interpretation</span>
+                    <p id="modalCaption" class="text-xs text-slate-200 leading-relaxed font-sans"></p>
                 </div>
             </div>
 
             <!-- Modal Footer -->
-            <div class="px-5 py-2.5 border-t border-[#e1e4e8] bg-slate-50 flex items-center justify-between text-xs text-slate-500 shrink-0">
-                <span class="text-[11px]">Press <kbd class="px-1 py-0.5 rounded bg-white border border-slate-300 font-mono text-[10px]">Esc</kbd> to exit</span>
-                <a id="modalDownload" href="" target="_blank" class="text-academic-blue hover:underline font-bold text-xs flex items-center space-x-1">
+            <div class="px-5 py-2.5 border-t border-[rgba(212,175,55,0.25)] bg-[#071629] flex items-center justify-between text-xs text-slate-400 shrink-0">
+                <span class="text-[11px]">Press <kbd class="px-1 py-0.5 rounded bg-[#0b1e33] border border-[rgba(212,175,55,0.3)] text-slate-200 font-mono text-[10px]">Esc</kbd> to exit</span>
+                <a id="modalDownload" href="" target="_blank" class="text-[#fbbf24] hover:underline font-bold text-xs flex items-center space-x-1">
                     <span>Open Raw 1800px File</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                 </a>
@@ -767,14 +819,14 @@
         </div>
     </div>
 
-    <!-- AcademicPages Classic Footer -->
-    <footer class="border-t border-[#e1e4e8] bg-white py-8 mt-16 text-center text-xs text-slate-400">
+    <!-- AcademicPages Blue-Gold Footer -->
+    <footer class="border-t border-[rgba(212,175,55,0.25)] bg-[#07162b] py-8 mt-16 text-center text-xs text-slate-400">
         <div class="max-w-7xl mx-auto px-4 space-y-1.5">
-            <p class="text-slate-600">
+            <p class="text-slate-200">
                 &copy; 2026 Xiaoyu Lyu (吕晓宇) · Lanzhou University, College of Ecology
             </p>
-            <p class="text-[11px]">
-                Powered by <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" class="text-academic-blue hover:underline">AcademicPages</a> & GitHub Pages
+            <p class="text-[11px] text-slate-400">
+                Powered by <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" class="text-[#fbbf24] hover:underline">AcademicPages</a> & GitHub Pages
             </p>
         </div>
     </footer>
