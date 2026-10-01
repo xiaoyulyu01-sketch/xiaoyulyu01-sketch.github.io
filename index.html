@@ -392,11 +392,85 @@
                 </section>
 
                 <!-- 3. PUBLICATIONS & PREPRINTS (AcademicPages Style) -->
-                <section id="publications" class="space-y-4">
-                    <h2 class="academic-h2">Publications & Manuscripts in Preparation</h2>
+                <section id="publications" class="space-y-6">
+                    <h2 class="academic-h2">Publications & Research Output</h2>
 
+                    <!-- 3.1 Peer-Reviewed Journal Articles (Published) -->
                     <div class="space-y-4">
-                        
+                        <div class="flex items-center space-x-2 text-xs font-bold text-[#fbbf24] uppercase tracking-wider">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                            <span>Peer-Reviewed Journal Articles (已发表同行评审论文)</span>
+                        </div>
+
+                        <!-- Published Paper 1: Field Crops Research -->
+                        <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.45)] bg-[#0c2035] space-y-2.5 shadow-md">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                                    <i class="fa-solid fa-circle-check mr-1"></i>Published (正式见刊)
+                                </span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">
+                                    中科院1区 Top / SCI Q1 (IF ~5.6)
+                                </span>
+                                <span class="text-xs text-slate-300 font-mono">February 2026</span>
+                            </div>
+
+                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug">
+                                Optimizing wheat yields from smallholdings: Crop density-dependent benefits of wide strip sowing under varying resource availability
+                            </h3>
+
+                            <p class="text-xs text-slate-200 leading-relaxed">
+                                Fan, J.-W., Jia, P., Li, S.-C., Sun, C.-Y., Palta, J. A., Kang, S.-Y., <strong class="text-[#fbbf24] underline decoration-[#d4af37]">Lv, X.-Y. (吕晓宇)</strong>, Hou, L., Li, F.-M., &amp; Du, Y.-L.
+                            </p>
+
+                            <p class="text-xs text-[#d4af37] font-serif">
+                                <strong>Field Crops Research</strong>, 2026, Vol. 336: 110228.
+                            </p>
+
+                            <p class="text-[11px] text-slate-300 leading-normal">
+                                <i class="fa-solid fa-handshake-angle text-[#fbbf24] mr-1"></i>
+                                <em>Co-authored empirical agronomic study evaluating wide-strip sowing and density-dependent facilitation across smallholder cropping environments.</em>
+                            </p>
+
+                            <!-- Interactive Buttons -->
+                            <div class="pt-1 flex flex-wrap gap-1">
+                                <a href="https://doi.org/10.1016/j.fcr.2025.110228" target="_blank" class="pub-btn primary">
+                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>DOI: 10.1016/j.fcr.2025.110228
+                                </a>
+                                <button onclick="toggleBox('abs-fcr')" class="pub-btn">
+                                    <i class="fa-solid fa-align-left mr-1 text-[#fbbf24]"></i>Abstract
+                                </button>
+                                <button onclick="toggleBox('bib-fcr')" class="pub-btn">
+                                    <i class="fa-solid fa-quote-right mr-1 text-[#fbbf24]"></i>BibTeX
+                                </button>
+                            </div>
+
+                            <!-- Expandable Abstract -->
+                            <div id="abs-fcr" class="expand-box">
+                                <strong class="text-[#fbbf24] block mb-1">Abstract:</strong>
+                                Wide strip sowing has emerged as an innovative agro-technological strategy to optimize crop density and improve resource acquisition in wheat production, especially across resource-constrained smallholdings. This study systematically evaluates how wide strip sowing interacts with varying crop densities and soil resource regimes to maximize grain yield and canopy microclimate stability. Findings demonstrate that density-dependent benefits are amplified under tailored resource conditions, offering scalable agronomic guidance for sustainable dryland intensification.
+                            </div>
+
+                            <!-- Expandable BibTeX -->
+                            <div id="bib-fcr" class="expand-box font-mono text-[11px] text-[#fde68a] whitespace-pre">@article{fan2026optimizing,
+  title={Optimizing wheat yields from smallholdings: Crop density-dependent benefits of wide strip sowing under varying resource availability},
+  author={Fan, Jing-Wei and Jia, Peiyin and Li, Shi-Cheng and Sun, Chu-Yi and Palta, Jairo A. and Kang, Shuang-Yi and Lv, Xiao-Yu and Hou, Li and Li, Feng-Min and Du, Yan-Lei},
+  journal={Field Crops Research},
+  volume={336},
+  pages={110228},
+  year={2026},
+  publisher={Elsevier},
+  doi={10.1016/j.fcr.2025.110228}
+}</div>
+                        </div>
+                    </div>
+
+                    <!-- 3.2 Manuscripts in Preparation -->
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center space-x-2 text-xs font-bold text-[#fbbf24] uppercase tracking-wider">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                            <span>Manuscripts in Preparation (在研论文手稿)</span>
+                        </div>
+
                         <!-- Paper 1 -->
                         <div class="p-4 sm:p-5 rounded-lg border border-[rgba(212,175,55,0.3)] bg-[#0a1c30]/90 space-y-2.5">
                             <div class="flex items-center space-x-2">
