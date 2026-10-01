@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maize–Legume Intercropping & Moisture Dynamics | Xiaoyu Lyu</title>
+    <meta name="description" content="Empirical field campaign on cold and dryland maize-legume intercropping, 0-200 cm soil moisture dynamics, and nutrient turnover on the Loess Plateau by Xiaoyu Lyu at Lanzhou University.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0a192f',
+                            900: '#071527',
+                            950: '#040d1a',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d4af37',
+                            600: '#b8860b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Academic Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #071527;
+            color: #f1f5f9;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+        .academic-h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+            padding-bottom: 0.35rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .gold-glow-card {
+            background: linear-gradient(145deg, #091b31 0%, #061222 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .photo-card {
+            background-color: #0a1c30;
+            border: 1px solid rgba(212, 175, 55, 0.28);
+            transition: all 0.25s ease-in-out;
+        }
+        .photo-card:hover {
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px -5px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="selection:bg-amber-400 selection:text-slate-900">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-[#07162b]/95 backdrop-blur-md border-b border-[rgba(212,175,55,0.3)] shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 text-white hover:text-[#fbbf24] font-bold text-sm transition group">
+                <i class="fa-solid fa-arrow-left text-[#fbbf24] group-hover:-translate-x-1 transition-transform"></i>
+                <span class="tracking-wide">Return to Main Profile</span>
+            </a>
+
+            <div class="flex items-center space-x-3 text-xs">
+                <span class="hidden sm:inline font-mono text-slate-400">Research Project 01 / 03</span>
+                <a href="Xiaoyu_Lyu_CV.pdf" download="Xiaoyu_Lyu_CV.pdf" class="px-2.5 py-1 rounded bg-[#d4af37]/20 hover:bg-[#d4af37]/35 border border-[#d4af37]/50 text-[#fbbf24] font-medium transition">
+                    <i class="fa-solid fa-file-pdf mr-1"></i>CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+
+        <!-- Breadcrumb & Top Tags -->
+        <nav class="flex items-center space-x-2 text-xs text-slate-400">
+            <a href="index.html" class="hover:text-[#fbbf24] transition">Home</a>
+            <span>/</span>
+            <a href="index.html#projects" class="hover:text-[#fbbf24] transition">Research Projects</a>
+            <span>/</span>
+            <span class="text-[#fbbf24] truncate">Intercropping & Moisture Dynamics</span>
+        </nav>
+
+        <!-- Project Hero Card -->
+        <section class="gold-glow-card rounded-xl p-6 sm:p-8 space-y-4">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-[#d4af37]/20 text-[#fbbf24] border border-[#d4af37]/40">
+                    <i class="fa-solid fa-calendar-days mr-1.5"></i>2025.04 – Present
+                </span>
+                <span class="px-2.5 py-1 rounded text-xs font-medium bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                    <i class="fa-solid fa-flask-vial mr-1.5"></i>Active Field Campaign
+                </span>
+                <span class="px-2.5 py-1 rounded text-xs font-medium bg-blue-500/15 text-blue-300 border border-blue-500/30">
+                    <i class="fa-solid fa-building-columns mr-1.5"></i>College of Ecology, Lanzhou University
+                </span>
+            </div>
+
+            <h1 class="text-xl sm:text-3xl font-bold text-white leading-tight">
+                Driving Effects of Maize–Legume Intercropping on Nutrient Turnover & Moisture Dynamics in Dryland Agroecosystems
+            </h1>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-4xl">
+                Investigating interspecific resource sharing, root spatial partitioning, and belowground carbon-nitrogen-phosphorus turnover across the semi-arid Loess Plateau. This project compares monoculture maize against intercrops with lablab bean (<em>Lablab purpureus</em>) and forage soybean (<em>Glycine max</em>) to resolve whether hydrological facilitation or severe competition predominates under seasonal drought stress.
+            </p>
+
+            <!-- Key Metric Tags -->
+            <div class="pt-2 flex flex-wrap gap-2 text-xs">
+                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
+                    <strong class="text-[#fbbf24]">Trial Layout:</strong> Split-Plot & RCBD
+                </span>
+                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
+                    <strong class="text-[#fbbf24]">Soil Profiling:</strong> 0–200 cm Continuous TDR Logging
+                </span>
+                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
+                    <strong class="text-[#fbbf24]">Target Intercrops:</strong> Maize + Lablab / Forage Soybean
+                </span>
+            </div>
+        </section>
+
+        <!-- Methodological Highlights -->
+        <section class="space-y-4">
+            <h2 class="academic-h2">
+                <span>Core Research Workflows & Methodologies</span>
+                <span class="text-xs text-slate-400 font-sans font-normal">Empirical Field Setup</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
+                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-wheat-awn"></i></div>
+                    <h3 class="text-sm font-bold text-white font-sans">1. Dryland Field Trial Design</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Constructed randomized complete block designs (RCBD) and split-plot systems comparing monoculture maize against distinct intercrop pairings. Evaluated temporal complementarity versus competitive resource depletion under natural precipitation constraints.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
+                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-faucet-drip"></i></div>
+                    <h3 class="text-sm font-bold text-white font-sans">2. 0–200 cm Moisture Profiling</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Installed deep access tubes and time-domain reflectometry (TDR) probes across 0–200 cm soil profiles. Tracked dynamic root-zone moisture drawdown during critical tasseling, silking, and grain-filling stages under recurrent drought spells.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
+                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-dna"></i></div>
+                    <h3 class="text-sm font-bold text-white font-sans">3. Nutrient Turnover & Competition</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Quantified belowground C/N/P stoichiometry, microbial biomass nutrients, and mineralized nitrogen/phosphorus turnover. Analyzed the trade-offs causing significant yield reductions in aggressive intercropping combinations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Field Work Photo Gallery -->
+        <section id="gallery" class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b-2 border-[rgba(212,175,55,0.4)] pb-1.5">
+                <h2 class="text-xl font-bold text-white font-serif m-0">Field Campaign & Work Photos</h2>
+                <span class="text-xs text-[#fbbf24] font-sans">Click any photo for high-resolution inspection</span>
+            </div>
+
+            <!-- Photos Grid -->
+            <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- Photo 1 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo1.jpg', 'Field Experimental Plot Layout', 'Panoramic view of the split-plot rainfed field trial on the Loess Plateau, contrasting monoculture maize with lablab and soybean intercropping strips.')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo1.jpg" alt="Field Trial Overview" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-mountain-sun text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Field Plot Overview</span><span class=\'text-[11px] text-slate-400\'>Loess Plateau Rainfed Experimental Plots</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #01</span>
+                            <span class="text-slate-400">Loess Plateau</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Experimental Plot Layout & Intercropping Bands</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Split-plot design pairing maize with lablab beans and forage soybeans under rainfed conditions.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo2.jpg', '0–200 cm Deep Soil Core Sampling', 'Collection of stratified soil cores across 0–200 cm depth using hand augers for soil moisture calibration and nutrient stoichiometry.')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo2.jpg" alt="Deep Soil Coring" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-bore-hole text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>0–200 cm Soil Profiling</span><span class=\'text-[11px] text-slate-400\'>Deep auger sampling & core extraction</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #02</span>
+                            <span class="text-slate-400">Soil Profiling</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">0–200 cm Deep Soil Coring & Sampling</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Depth-stratified soil extraction for gravimetric moisture, available N/P, and organic carbon.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo3.jpg', 'In-Situ TDR Soil Moisture Monitoring', 'Deployment of time-domain reflectometry (TDR) access probes down to 200 cm depth to monitor high-frequency root-zone water content.')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo3.jpg" alt="TDR Moisture Logging" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-chart-line text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>TDR Sensor Logging</span><span class=\'text-[11px] text-slate-400\'>In-situ moisture sensors at multiple layers</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #03</span>
+                            <span class="text-slate-400">Root-Zone TDR</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">In-Situ Moisture Sensor Deployment</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Multi-depth TDR sensors capturing seasonal soil water drawdown and competition dynamics.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo4.jpg', 'Crop Canopy Development & Light Interception', 'Field monitoring of maize and legume leaf area expansion, canopy closure, and PAR interception across the vegetative growth stages.')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo4.jpg" alt="Canopy Interception" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-leaf text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Canopy Phenotyping</span><span class=\'text-[11px] text-slate-400\'>Leaf area expansion & PAR interception</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #04</span>
+                            <span class="text-slate-400">Canopy Dynamics</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Canopy Architecture & Phenotyping</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Assessing foliar light competition and spatial niche segregation between tall maize and spreading legumes.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo5.jpg', 'Root System Excavation & Spatial Partitioning', 'Excavation of root monoliths to quantify vertical root distribution, inter-root spatial intermingling, and nodulation efficiency.')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo5.jpg" alt="Root Excavation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-seedling text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Root System Architecture</span><span class=\'text-[11px] text-slate-400\'>Root washing, scanner analysis & nodulation</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #05</span>
+                            <span class="text-slate-400">Root Scanning</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Root Architecture & Spatial Partitioning</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Destructive root sampling, scanning for root length density, and symbiotic nodule assessment.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
+                     onclick="openLightbox('assets/projects/intercropping/photo6.jpg', 'Biomass Harvest & Agronomic Yield Weighing', 'End-of-season destructive sampling to measure vegetative biomass, grain yield per plot, harvest index, and Land Equivalent Ratio (LER).')">
+                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
+                        <img src="assets/projects/intercropping/photo6.jpg" alt="Harvest & Yield" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-scale-balanced text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Biomass & Harvest</span><span class=\'text-[11px] text-slate-400\'>Yield weighing & Land Equivalent Ratio (LER)</span></div>';">
+                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
+                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
+                        </div>
+                    </div>
+                    <div class="p-3.5 space-y-1">
+                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
+                            <span>CAMPAIGN PHOTO #06</span>
+                            <span class="text-slate-400">Harvest Stage</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Biomass Partitioning & Harvest Yield</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Evaluating economic yields and quantifying land productivity advantages versus yield penalties.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Project Switcher Navigation -->
+        <div class="border-t border-[rgba(212,175,55,0.25)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <a href="index.html#projects" class="text-slate-400 hover:text-white flex items-center space-x-1.5 transition">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to All Projects</span>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <span class="text-slate-400">Next Project:</span>
+                <a href="project-microbiology.html" class="px-3 py-1.5 rounded bg-[#0a1c30] hover:bg-[#d4af37]/20 border border-[#d4af37]/40 text-[#fbbf24] font-medium transition flex items-center space-x-1.5">
+                    <span>Saline-Alkali Soil Microbiology</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Global Lightbox Modal -->
+    <div id="photoLightbox" class="fixed inset-0 z-50 bg-[#040c17]/95 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6" onclick="closeLightboxOnBackdrop(event)">
+        <div id="lightboxContainer" class="relative max-w-4xl w-full bg-[#0a1b30] border border-[#d4af37] rounded-xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300">
+            <button onclick="closeLightbox()" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-[#071527]/80 hover:bg-[#d4af37] text-white hover:text-[#071527] border border-[#d4af37]/50 flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            <div class="p-2 sm:p-4 bg-[#050e1a] flex items-center justify-center min-h-[300px] max-h-[70vh]">
+                <img id="lightboxImg" src="" alt="Full View" class="max-w-full max-h-[68vh] object-contain rounded">
+            </div>
+            <div class="p-4 sm:p-5 border-t border-[rgba(212,175,55,0.3)] bg-[#0a1b30] space-y-1.5">
+                <h3 id="lightboxTitle" class="text-base font-bold text-white font-serif"></h3>
+                <p id="lightboxCaption" class="text-xs text-slate-300 leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-[rgba(212,175,55,0.25)] bg-[#07162b] py-8 mt-16 text-center text-xs text-slate-400">
+        <div class="max-w-6xl mx-auto px-4 space-y-1">
+            <p class="text-slate-200">
+                &copy; 2026 Xiaoyu Lyu · Lanzhou University, College of Ecology
+            </p>
+            <p class="text-[11px] text-slate-400">
+                Research Project Portfolio · Maize–Legume Intercropping & Moisture Dynamics
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Scripts -->
+    <script>
+        function openLightbox(imgSrc, title, caption) {
+            const modal = document.getElementById('photoLightbox');
+            const container = document.getElementById('lightboxContainer');
+            const img = document.getElementById('lightboxImg');
+            const titleEl = document.getElementById('lightboxTitle');
+            const captionEl = document.getElementById('lightboxCaption');
+
+            img.src = imgSrc;
+            titleEl.textContent = title;
+            captionEl.textContent = caption;
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                container.classList.remove('scale-95');
+                container.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('photoLightbox');
+            const container = document.getElementById('lightboxContainer');
+
+            modal.classList.add('opacity-0');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+
+        function closeLightboxOnBackdrop(e) {
+            if (e.target.id === 'photoLightbox') {
+                closeLightbox();
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
