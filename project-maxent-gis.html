@@ -129,175 +129,63 @@
                 Constructed predictive ecological niche models (ENM) applying the Maximum Entropy (MaxEnt) algorithm to assess spatial environmental suitability for target crops. Integrated high-resolution bioclimatic grids with edaphic physicochemical raster layers, identifying dominant environmental drivers, response curves, and defining spatial zoning boundaries for regional agricultural planning and scientific cartography.
             </p>
 
-            <!-- Key Metric Tags -->
-            <div class="pt-2 flex flex-wrap gap-2 text-xs">
-                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
-                    <strong class="text-[#fbbf24]">Modeling Algorithm:</strong> MaxEnt (v3.4.4)
-                </span>
-                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
-                    <strong class="text-[#fbbf24]">Environmental Layers:</strong> Bioclimatic (WorldClim) + Soil HWSD
-                </span>
-                <span class="bg-[#0c243f] text-slate-200 px-3 py-1 rounded border border-[rgba(212,175,55,0.2)]">
-                    <strong class="text-[#fbbf24]">Spatial Cartography:</strong> QGIS & ArcGIS Multi-Criteria Overlays
-                </span>
-            </div>
-        </section>
-
-        <!-- Methodological Highlights -->
-        <section class="space-y-4">
-            <h2 class="academic-h2">
-                <span>Core Analytical Pipeline</span>
-                <span class="text-xs text-slate-400 font-sans font-normal">Ecological Niche Modeling</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
-                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-database"></i></div>
-                    <h3 class="text-sm font-bold text-white font-sans">1. Layer Harmonization & Screening</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Extracted, resampled, and aligned 19 bioclimatic variables with terrain (DEM, slope, aspect) and soil layers (pH, salinity, organic carbon). Filtered multi-collinear layers using Pearson correlation coefficients (|r| < 0.8) and VIF diagnostics.
-                    </p>
-                </div>
-
-                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
-                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-sm font-bold text-white font-sans">2. MaxEnt Parameter Optimization</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Tuned feature combinations (Linear, Quadratic, Product, Threshold, Hinge) and regularization multipliers to prevent model overfitting. Evaluated predictive performance via Jackknife tests, AUC values, and Boyce indices.
-                    </p>
-                </div>
-
-                <div class="p-5 rounded-lg border border-[rgba(212,175,55,0.25)] bg-[#0a1c30] space-y-2">
-                    <div class="text-[#fbbf24] text-lg"><i class="fa-solid fa-map"></i></div>
-                    <h3 class="text-sm font-bold text-white font-sans">3. Spatial Zoning & Publication Cartography</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        Transformed continuous probability surfaces into classified suitability tiers (Unsuitable, Low, Moderate, High) using maximum training sensitivity plus specificity (MTSPS) thresholds. Designed publication-ready maps in QGIS.
-                    </p>
-                </div>
-            </div>
         </section>
 
         <!-- Spatial Works Photo Gallery -->
         <section id="gallery" class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b-2 border-[rgba(212,175,55,0.4)] pb-1.5">
-                <h2 class="text-xl font-bold text-white font-serif m-0">Modeling Outputs & Cartography Gallery</h2>
+                <h2 class="text-xl font-bold text-white font-serif m-0">Modeling Outputs & Spatial Cartography</h2>
                 <span class="text-xs text-[#fbbf24] font-sans">Click any figure for high-resolution inspection</span>
             </div>
 
             <!-- Photos Grid -->
             <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                <!-- Photo 1 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo1.jpg', 'Environmental Raster Preprocessing', 'Standardizing spatial projections, coordinate references, and raster clipping across regional boundaries.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo1.jpg" alt="Raster Preprocessing" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-globe text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Raster Preprocessing</span><span class=\'text-[11px] text-slate-400\'>Bioclimatic & edaphic layer harmonization</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
+                <!-- Figure 1: 指标贡献度分析 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm relative"
+                     onclick="openLightbox('assets/projects/maxent-gis/variable_contribution.webp', 'Environmental Variable Contribution Analysis (指标贡献度分析)', 'Quantitative evaluation of percent contribution and permutation importance across key bioclimatic and soil variables in the MaxEnt model.')">
+                    <div class="h-60 bg-[#061426] relative overflow-hidden border-b border-[rgba(212,175,55,0.2)]">
+                        <img src="assets/projects/maxent-gis/variable_contribution_thumb.webp" alt="Environmental Variable Contribution Analysis" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                     </div>
                     <div class="p-3.5 space-y-1">
                         <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #01</span>
-                            <span class="text-slate-400">Data Preprocessing</span>
+                            <span>MODEL OUTPUT #01</span>
+                            <span class="text-slate-400">Variable Importance</span>
                         </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Environmental Raster Layer Alignment</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Harmonizing cell resolution, boundary masks, and spatial references for WorldClim and soil matrices.</p>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Variable Contribution & Importance Ranking</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal">Quantitative evaluation of percent contribution and permutation importance ranking driving factors in species distribution.</p>
                     </div>
                 </div>
 
-                <!-- Photo 2 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo2.jpg', 'Spatial Thinning of Occurrence Points', 'Applying spatial filtering buffers to eliminate geographic clustering and reduce spatial sampling bias.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo2.jpg" alt="Occurrence Thinning" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-location-crosshairs text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Spatial Thinning</span><span class=\'text-[11px] text-slate-400\'>Occurrence point de-biasing & spatial filtering</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
+                <!-- Figure 2: 隶属度分析 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm relative"
+                     onclick="openLightbox('assets/projects/maxent-gis/membership_response.webp', 'Fuzzy Membership & Environmental Response Curves (隶属度分析)', 'Threshold response curves and fuzzy membership distributions illustrating environmental tolerance intervals and probability of occurrence.')">
+                    <div class="h-60 bg-[#061426] relative overflow-hidden border-b border-[rgba(212,175,55,0.2)]">
+                        <img src="assets/projects/maxent-gis/membership_response_thumb.webp" alt="Fuzzy Membership & Environmental Response Curves" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                     </div>
                     <div class="p-3.5 space-y-1">
                         <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #02</span>
-                            <span class="text-slate-400">Occurrence Records</span>
+                            <span>MODEL OUTPUT #02</span>
+                            <span class="text-slate-400">Response Curves</span>
                         </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Species Occurrence De-biasing & Filtering</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Implementing spatial buffer algorithms to remove autocorrelation and sample density artifacts.</p>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Fuzzy Membership & Response Curves</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal">Environmental tolerance thresholds and presence probability curves across dominant climatic and soil factors.</p>
                     </div>
                 </div>
 
-                <!-- Photo 3 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo3.jpg', 'MaxEnt Tuning & Performance Evaluation', 'Evaluation of AICc, AUC, and omission error rates across varying regularization parameters.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo3.jpg" alt="Model Evaluation" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-sliders text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Model Calibration</span><span class=\'text-[11px] text-slate-400\'>Regularization multiplier & feature class tuning</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
+                <!-- Figure 3: 适宜分布区分析 -->
+                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm relative"
+                     onclick="openLightbox('assets/projects/maxent-gis/suitability_distribution.webp', 'Habitat Suitability Distribution Overview (适宜分布区分析)', 'Generalized spatial prediction demarcating regional ecological suitability tiers (low-resolution schematic overview compliant with confidentiality guidelines).')">
+                    <div class="h-60 bg-[#061426] relative overflow-hidden border-b border-[rgba(212,175,55,0.2)]">
+                        <img src="assets/projects/maxent-gis/suitability_distribution_thumb.webp" alt="Habitat Suitability Distribution Overview" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                     </div>
                     <div class="p-3.5 space-y-1">
                         <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #03</span>
-                            <span class="text-slate-400">Parameter Tuning</span>
+                            <span>MODEL OUTPUT #03</span>
+                            <span class="text-slate-400">Spatial Suitability</span>
                         </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">MaxEnt Model Calibration & Optimization</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Optimizing regularization parameters and feature classes to minimize complexity and overfitting.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 4 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo4.jpg', 'Environmental Response Curves & Jackknife Analysis', 'Marginal response curves depicting target crop survival probability across precipitation and soil pH gradients.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo4.jpg" alt="Response Curves" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-bezier-curve text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Response Curves</span><span class=\'text-[11px] text-slate-400\'>Environmental thresholds & Jackknife importance</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
-                    </div>
-                    <div class="p-3.5 space-y-1">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #04</span>
-                            <span class="text-slate-400">Ecological Thresholds</span>
-                        </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Response Curves & Jackknife Importance</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Identifying limiting ecological factors, optimum thermal ranges, and minimum moisture requirements.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 5 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo5.jpg', 'Multi-Criteria GIS Overlay & Constraint Masking', 'Masking out protected nature reserves, urban fabric, and water bodies using GIS spatial overlay tools.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo5.jpg" alt="GIS Overlay" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-layer-group text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>GIS Multi-Criteria Overlay</span><span class=\'text-[11px] text-slate-400\'>Constraint masks & land-use zoning</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
-                    </div>
-                    <div class="p-3.5 space-y-1">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #05</span>
-                            <span class="text-slate-400">Spatial Overlay</span>
-                        </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Multi-Criteria GIS Constraint Masking</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Integrating land use (CLCD), terrain slopes, and administrative zoning to refine realistic planting boundaries.</p>
-                    </div>
-                </div>
-
-                <!-- Photo 6 -->
-                <div class="photo-card rounded-lg overflow-hidden cursor-pointer group shadow-sm"
-                     onclick="openLightbox('assets/projects/maxent-gis/photo6.jpg', 'Publication-Ready Suitability Zoning Map', 'High-resolution thematic cartography illustrating regional suitability gradients, legend, north arrow, and inset locator.')">
-                    <div class="h-52 bg-[#061426] flex items-center justify-center border-b border-[rgba(212,175,55,0.2)] overflow-hidden relative">
-                        <img src="assets/projects/maxent-gis/photo6.jpg" alt="Publication Map" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center p-6 text-center text-slate-400 space-y-2\'><i class=\'fa-solid fa-map-marked-alt text-3xl text-[#d4af37]/60\'></i><span class=\'text-xs font-mono text-[#fbbf24]\'>Final Publication Cartography</span><span class=\'text-[11px] text-slate-400\'>Suitability classification & layout rendering</span></div>';">
-                        <div class="absolute bottom-2 right-2 bg-[#071527]/80 text-[#fbbf24] px-2 py-0.5 rounded text-[10px] font-mono border border-[#d4af37]/30">
-                            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i>Zoom
-                        </div>
-                    </div>
-                    <div class="p-3.5 space-y-1">
-                        <div class="flex items-center justify-between text-[11px] font-mono text-[#fbbf24]">
-                            <span>GIS MAP #06</span>
-                            <span class="text-slate-400">Publication Output</span>
-                        </div>
-                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">High-Resolution Suitability Zoning Cartography</h4>
-                        <p class="text-[11px] text-slate-300 leading-normal line-clamp-2">Final layout design meeting stringent journal standards with clean color ramps and geographic annotations.</p>
+                        <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition">Habitat Suitability Distribution Overview</h4>
+                        <p class="text-[11px] text-slate-300 leading-normal">Generalized spatial suitability zoning map (low-resolution schematic overview compliant with confidentiality standards).</p>
                     </div>
                 </div>
 
