@@ -195,7 +195,6 @@
                 <a href="#projects" class="hover:text-[#fbbf24] transition">Projects & Fieldwork</a>
                 <a href="#framework" class="hover:text-[#fbbf24] transition">Mechanism Model</a>
                 <a href="#publications" class="hover:text-[#fbbf24] transition">Publications</a>
-                <a href="#figures" class="hover:text-[#fbbf24] transition">Research Figures</a>
                 <a href="#pipeline" class="hover:text-[#fbbf24] transition">Methodology</a>
                 <a href="#education" class="hover:text-[#fbbf24] transition">Education</a>
                 <a href="#cv" class="hover:text-[#fbbf24] transition">CV</a>
@@ -603,97 +602,7 @@
                     </div>
                 </section>
 
-                <!-- 5. PUBLICATION RESEARCH FIGURES GALLERY -->
-                <section id="figures" class="space-y-4">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b-2 border-[rgba(212,175,55,0.35)] pb-1.5 mt-8 mb-4">
-                        <h2 class="text-xl font-bold text-white m-0">Research Figures Gallery</h2>
-                        <span class="text-xs text-[#fbbf24] font-sans">Click any figure for full 1800px lightbox view</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-                        <!-- Fig 1 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig1_Growth_Photosynthesis.webp', 'Figure 1: Growth, Biomass & Photosynthetic Gas Exchange Responses', 'Comparative analysis of leaf area (cm²), foliar P content (mg), net assimilation rate A (μmol m⁻² s⁻¹), photosynthetic phosphorus-use efficiency PPUE, and leaf phosphorus per area (Parea) across normalized leaf expansion, maturation, and senescence stages under Low (LP), Medium (MP), and Control (Ctrl) conditions.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig1_Growth_Photosynthesis_thumb.webp" alt="Fig 1" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 1</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Plant Growth & Gas Exchange ($A$, PPUE)</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Biomass expansion, net assimilation, and PPUE under P gradients.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 2 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig2_P_Fractions_Dynamics.webp', 'Figure 2: Temporal Dynamics of Leaf Phosphorus Chemical Fractions', 'Temporal concentration profiles (mg m⁻²) of leaf inorganic-P (Pi), metabolite P (PM), lipid P (PL), nucleic acid P (PN), and residual P over days after emergence under LP, MP, and Ctrl regimes. Different uppercase and lowercase letters represent significant differences (P < 0.05) based on two-way ANOVA and post-hoc Tukey tests.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig2_P_Fractions_Dynamics_thumb.webp" alt="Fig 2" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 2</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Leaf Phosphorus Fractions Dynamics</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Temporal tracking of $P_i$, $P_M$, $P_L$, and $P_N$ across ontogeny.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 3 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig3_PPUE_Coordination.webp', 'Figure 3: Coordination Between Phosphorus Fractions and Photosynthetic Rate', 'Bivariate linear regressions correlating net photosynthetic rate (A) and photosynthetic phosphorus-use efficiency (PPUE) with relative proportions of leaf inorganic-P, metabolite P, lipid P, nucleic acid P, and residual P across growth stages, highlighting functional trade-offs and threshold effects.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig3_PPUE_Coordination_thumb.webp" alt="Fig 3" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 3</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">PPUE & P-Fraction Regressions</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Bivariate trait coupling and threshold regressions with assimilation.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 4 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig4_Lipid_Remodeling.webp', 'Figure 4: Membrane Glycerolipid and Phospholipid Remodeling', 'Molecular species composition and shifts between phospholipids (PG, PC, PE, PI) and non-phospholipids (galactolipids MGDG, DGDG; sulfolipid SQDG) in thylakoid and extraplastidic membranes under phosphorus stress and developmental senescence.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig4_Lipid_Remodeling_thumb.webp" alt="Fig 4" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 4</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Membrane Lipid Remodeling</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Glycerolipid & phospholipid replacement under starvation.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 5 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig5_PUE_Resorption.webp', 'Figure 5: Foliar Phosphorus Resorption Efficiency (PRE) Dynamics', 'Nutrient resorption efficiency and proficiency evaluated in green vs senescent leaves, quantifying the percentage remobilization of individual P chemical pools back into developing sink organs.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig5_PUE_Resorption_thumb.webp" alt="Fig 5" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 5</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Phosphorus Resorption Efficiency (PRE)</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Nutrient resorption proficiency during foliar senescence.</p>
-                            </div>
-                        </div>
-
-                        <!-- Fig 6 -->
-                        <div class="border border-[rgba(212,175,55,0.3)] rounded-lg overflow-hidden bg-[#0a1c30] hover:border-[#fbbf24] transition cursor-pointer group shadow-sm"
-                             onclick="openModal('assets/figures/Fig6_Photosynthesis_Resorption.webp', 'Figure 6: Photosynthetic Coordination with Nutrient Mobilization', 'Integrated functional coordination linking carbon assimilation capacity, chlorophyll retention, and leaf nitrogen/phosphorus resorption across diverse crop species.')">
-                            <div class="p-2.5 bg-white border-b border-[rgba(212,175,55,0.2)]">
-                                <img src="assets/figures/Fig6_Photosynthesis_Resorption_thumb.webp" alt="Fig 6" class="w-full h-36 object-contain group-hover:scale-102 transition">
-                            </div>
-                            <div class="p-3 space-y-1">
-                                <span class="text-[10px] font-mono text-[#fbbf24] font-bold block">FIGURE 6</span>
-                                <h4 class="text-xs font-bold text-white group-hover:text-[#fbbf24] transition line-clamp-1">Photosynthesis & Resorption Coupling</h4>
-                                <p class="text-[11px] text-slate-300 line-clamp-2">Coordination between carbon fixation and nutrient export.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- 6. METHODOLOGY & TECHNICAL COMPETENCIES -->
+                <!-- 5. METHODOLOGY & TECHNICAL COMPETENCIES -->
                 <section id="pipeline" class="space-y-4">
                     <h2 class="academic-h2">Technical & Laboratory Pipeline</h2>
 
